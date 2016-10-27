@@ -12,13 +12,13 @@ input[type=text] {
 	margin-left: 45%;
 	margin-top: 20px;
 	-webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.2s ease-in-out;
 }
 
 /* change the search bar width when clicked on */
-/*input[type=text]:focus {
-    width: 50%;
-}*/
+input[type=text]:focus {
+    width: 30%;
+}
 
 /* Dropdown button */
 .dropbtn {
@@ -35,11 +35,15 @@ input[type=text] {
 	background-color: #3e8e41;
 }
 
+/* the actual button position */
 .dropdown {
     //position: relative;
     display:inline-block;
     float: right;
     //display: inline-block;
+    margin-top: 10px;
+    margin-right: 40px;
+
 }
 
 /* Hidden content */

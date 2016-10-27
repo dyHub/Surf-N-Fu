@@ -12,6 +12,7 @@ logs
 results
 
 /node_modules
+/node_modules_backup
 
 npm-debug.log
 *~

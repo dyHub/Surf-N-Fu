@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input[type=text] {
+	width: 100px;
+	//margin: 0 45%;
+	//float: left;
+	display: inline-block;
+	margin-right: 0;
+	margin-left: 45%;
+	margin-top: 20px;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* change the search bar width when clicked on */
+/*input[type=text]:focus {
+    width: 50%;
+}*/
+
+/* Dropdown button */
+.dropbtn {
+	background-color: #4CAF50;
+    color: white;
+	padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dropbtn:hover, .dropbtun:focus {
+	background-color: #3e8e41;
+}
+
+.dropdown {
+    //position: relative;
+    display:inline-block;
+    float: right;
+    //display: inline-block;
+}
+
+/* Hidden content */
+.dropdown-content {
+	display: none;
+	position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links to content */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

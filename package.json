@@ -1,8 +1,8 @@
 {
-  "name": "COGS 120/CSE 170",
+  "name": "cogs120",
   "description": "Serving static content via html files",
   "version": "0.0.1",
-  "author": "Team Vanilla",
+  "author": "Paul Hoang <p3hoang@gmail.com>",
 
   "repository": {
   	"type": "git",

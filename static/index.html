@@ -13,7 +13,23 @@
 	<h2 id="question">What do you feel like doing today?</h2>
 
 	<!-- The search bar -->
-	<input id="searchBox" type="text" name="search" placeholder="Search location..">
+	<!--input id="searchBox" type="text" name="search" placeholder="Search location.."-->
+
+	<!-- Google's search bar -->
+	<div>
+		<script>
+	  		(function() {
+		    var cx = '007634263214480814907:eula1-au9jm';
+		    var gcse = document.createElement('script');
+		    gcse.type = 'text/javascript';
+		    gcse.async = true;
+		    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(gcse, s);
+		  })();
+		</script>
+		<gcse:search></gcse:search>
+	</div>
 
 	<!-- Option 2 -->
 	

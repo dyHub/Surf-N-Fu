@@ -25,15 +25,15 @@
   <div>
     <h1>Welcome {{activity}}</h1>
     <script>
-    (function() {
-      var cx = '007634263214480814907:eula1-au9jm';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
+      (function() {
+        var cx = '007634263214480814907:eula1-au9jm';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
     </script>
     <gcse:search></gcse:search>
   </div>
@@ -91,7 +91,7 @@
     }
   </script>
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=googleapis&callback=initMap">
+  src={{googleAPI}}>
   </script>
 </body>
 </html>

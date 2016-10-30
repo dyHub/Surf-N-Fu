@@ -5,18 +5,23 @@
 	<title>COGS120/CSE170 Skeleton</title>
 	<link href = "css/index.css" rel="stylesheet">
 	<script src="routes/index.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 
 <body>
-	<!-- Option 1 -->
-	<br>
-	<h2 id="question">What do you feel like doing today?</h2>
+	<div class="center-vertical">
+		<div>
+			<!-- Option 1 --> 
+			<h1 style="color:white;">What do you feel like doing today?</h2>
 
-	<!-- The search bar -->
-	<!--input id="searchBox" type="text" name="search" placeholder="Search location.."-->
+			<!-- The search bar -->
+			<!--input id="searchBox" type="text" name="search" placeholder="Search location.."-->
 
-	<!-- Google's search bar -->
-	<div>
+			<!-- Google's search bar -->
+<!-- 	<div>
 		<script>
 	  		(function() {
 		    var cx = '007634263214480814907:eula1-au9jm';
@@ -29,16 +34,20 @@
 		  })();
 		</script>
 		<gcse:search></gcse:search>
+	</div> -->
+
+			<!-- Option 2 -->
+
+			<h2 style="color:white; padding:10px;">Quick Hits</h2>
+			<div class="row">
+				<div style="color:white; padding:5px;">
+					<a href="html_pages/surf.html" type="button" class="btn btn-info btn-lg">Surfing</a>
+					"&nbsp""&nbsp"
+					<a href="html_pages/hike.html" type="button" class="btn btn-info btn-lg">Hiking</a>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<!-- Option 2 -->
-	
-	<h2>Quick Hits</h2>
-
-	<button class="options" id="firstButton" type="button"><a href="html_pages/surf.html">Surfing</button>
-
-
-	<button class="options" type="button"><a href="html_pages/hike.html">Hiking</button>
 
 </body>
 </html>

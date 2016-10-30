@@ -7,11 +7,6 @@ h2 {
 	text-align: center;
 	margin-bottom: 30px
 }
-#question {
-	margin-top: 100px;
-	text-align: center;
-}
-
 #searchBox {
 	margin-left: 44%;
 	margin-top: 20px;
@@ -35,12 +30,15 @@ h2 {
     //text-align: center;
 }
 
-#firstButton {
-	margin-left: 42.5%
+.center-vertical {
+	position: relative;
+  	margin-top: 250px;
+  	margin-bottom: 300px;
+  	text-align: center;
 }
 
 body {
-    background: url("../images/city_background.jpg") no-repeat center center fixed;
+    background: url("../images/city_background5.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;

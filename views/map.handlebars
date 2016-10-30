@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>COGS120/CSE170 Skeleton</title>
+  <link href = "/css/map.css" rel="stylesheet">
+
+  <script src="/js/map.js"></script>
+</head>
+
+<body>
+  <h1>Welcome {{activity}}</h1>
+  <!--h1><a href="./index.html">Surf app</h1-->
+  <!--div id="searchBox"-->
+    <!-- centered search bar -->
+    <!--input type="text" name="search" placeholder="Search location.."-->
+    <!--form id="searchbox" action="">
+        <input id="search" type="text" placeholder="Type here">
+        <input id="submit" type="submit" value="Search">
+    </form-->
+  <!--/div-->
+
+  <!-- Google's search bar -->
+  <div>
+    <script>
+        (function() {
+        var cx = '007634263214480814907:eula1-au9jm';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
+
+  <!-- dropdown menu text button -->
+  <div class="dropdown">
+    <button onclick="myDrop()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="/">Home</a>
+        <a href={{weatherLink}}>Weather</a>
+        <a href={{reviewLink}}>Reviews</a>
+        <!--a href="#">Link 2</a>
+        <a href="#">Link 3</a-->
+      </div>
+  </div>
+
+  <div class="map">
+    <img src={{image}} width="1276" height="525">
+  </div>
+  <!--/div-->
+</body>
+</html>

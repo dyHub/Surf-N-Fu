@@ -15,6 +15,10 @@ var review = require('./routes/review');
 var login = require('./routes/login');
 var app = express();
 
+// Fixing deprecated methodOverride
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +28,11 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.methodOverride());
+//app.use(express.methodOverride());
+
+app.use(bodyParser.json());
+app.use(methodOverride());
+
 app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);

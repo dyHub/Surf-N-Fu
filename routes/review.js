@@ -5,12 +5,12 @@
 exports.view = function(req, res){
   var activity = req.params.activity;
   var mapLink = '/map/' + activity;
-  var reviewLink = '/review/' + activity;
+  var weatherLink = "/weather/" + activity;
 
   console.log("activity is " + activity);
   res.render('review', {
   	'activity': activity,
-  	'reviewLink': reviewLink,
+  	'weatherLink': weatherLink,
     'mapLink': mapLink
   });
 };

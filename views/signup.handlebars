@@ -2,39 +2,31 @@
 
 <html>
 <head>
-	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>       
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script> 
 
-	<script>
-	function pullJSON(){
-		console.log("ihi");
-		$.ajax({
-    url: '/json/login.json',
-    dataType: 'json',
-    cache: false,
-    success: function(data) {
-        console.log(data);
-    }
-});
-	}
-	</script-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 	<script	src="../js/signup.js"></script>
 </head>
 
 <body>
-<h1> Sign Up </h1>
-<br/>
-<form onsubmit="checkForm(this)">
-Username: <input id="uname" type="text" name="username"><br>
+	
+	<h1>
+		<a href="/" style="text-decoration:none;"> Sign Up </a>
+	</h1>
 
-Password: <input id="txtNewPassword" type="password" name="pwd1"><br>
+	<br>
 
-Retype Password: <input id="txtConfirmPassword" type="password" name="pwd2" onChange="checkPasswordMatch();">
+	<form onsubmit="checkForm(this)">
+		Username: <input id="uname" type="text" name="username"><br>
 
-<div id="checkPasswordMatch"></div><br>
+		Password: <input id="txtNewPassword" type="password" name="pwd1"><br>
 
-<input type="submit" value="Submit">
-</form>
+		Retype Password: <input id="txtConfirmPassword" type="password" name="pwd2" onChange="checkPasswordMatch();">
+
+		<div id="checkPasswordMatch"></div><br>
+
+		<input type="submit" value="Submit">
+	</form>
 
 </body>
 </html>

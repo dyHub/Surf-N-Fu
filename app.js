@@ -13,6 +13,7 @@ var map = require('./routes/map');
 var weather = require('./routes/weather');
 var review = require('./routes/review');
 var login = require('./routes/login');
+var signup = require('./routes/signup');
 var app = express();
 
 // Fixing deprecated methodOverride
@@ -48,7 +49,8 @@ app.get('/', index.view);
 app.get('/map/:activity', map.view);
 app.get('/weather/:activity', weather.view);
 app.get('/review/:activity', review.view);
-app.get('/login/', login.view)
+app.get('/login/', login.view);
+app.get('/signup/', signup.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

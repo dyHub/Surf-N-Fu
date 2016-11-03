@@ -15,13 +15,17 @@
 
 	<script>
 		function pullJSON(){
-			console.log("ihi");
+			
 			$.ajax({
 	    url: '/json/login.json',
-	    dataType: 'json',
+	    dataType: 'text',
 	    cache: false,
 	    success: function(data) {
-	        console.log(data);
+	        var obj = JSON.parse(data);
+
+			document.getElementById("uname").value = obj.username;
+			document.getElementById("password").value = obj.password;
+			window.location = "/"
 	    }
 	});
 	}
@@ -39,9 +43,8 @@
 
 	Password: <input id="password" type="text" name="LastName"><br>
 
-	<!--button type="button" onclick="pullJSON()"> Submit </button-->
+	<button type="button" onclick="pullJSON()"> Submit </button>
 
-	<a href="/" type="button" class="btn btn-default">Submit</a>
 	</form>
 
 	<script src="/js/jquery.js"></script>

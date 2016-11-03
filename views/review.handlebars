@@ -11,6 +11,9 @@
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 
 	<link href = "/css/review.css" rel="stylesheet">
+
+  <script src="../js/review.js"></script>
+
 </head>
 
 <body>
@@ -48,6 +51,20 @@
   		</div>
   	</div>
   </div>
+
+  <div>
+    <p id="displayStatus">Current Status:<p>
+    <p id="currStatus">Unknown</p>
+  </div>
+
+  <br>
+
+  <!-- Crowd source buttons -->
+  <a type="button" class="btn btn-lg btn-primary" onclick="return emptyFunc()">Empty</a>
+  <a type="button" class="btn btn-lg btn-primary" onclick="slightlyFunc();">Slightly Crowded</a>
+  <a type="button" class="btn btn-lg btn-primary" onclick="crowdedFunc();">Crowded</a>  
+
+
 
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>

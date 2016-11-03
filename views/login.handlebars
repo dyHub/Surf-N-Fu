@@ -13,23 +13,24 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 	</script>       
 
-	<script>
+	<script src="../js/login.js"></script>
+	<!--script>
 		function pullJSON(){
 			
 			$.ajax({
-	    url: '/json/login.json',
-	    dataType: 'text',
-	    cache: false,
-	    success: function(data) {
-	        var obj = JSON.parse(data);
+			    url: '/json/login.json',
+			    dataType: 'text',
+			    cache: false,
+			    success: function(data) {
+			        var obj = JSON.parse(data);
 
-			document.getElementById("uname").value = obj.username;
-			document.getElementById("password").value = obj.password;
-			window.location = "/"
-	    }
-	});
-	}
-	</script>
+					document.getElementById("uname").value = obj.username;
+					document.getElementById("password").value = obj.password;
+					window.location = "/"
+			    }
+			});
+		}
+	</script-->
 </head>
 
 <body>

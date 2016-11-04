@@ -17,7 +17,7 @@ exports.view = function(req, res){
             'weatherLink': weatherLink,
             'mapLink': mapLink,
             'beachName': beachJson["beaches"][beach]["name"],
-            'description': beachJson["beaches"][beach]["description"],
+            'description': beachJson["beaches"][beach]["description"].join('')
         });
     } else {
         res.render('review', {

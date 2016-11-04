@@ -7,3 +7,36 @@
 	float: left;
 	padding-right: 10px;
 }
+
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+.rating > span {
+	color: #f0ad4e;
+	font-size: 50px;
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	content: "\2605";
+	position: absolute;
+}
+
+.rating #rated {
+	text-shadow: 1px 1px #f0ad4e, 0 1px #f0ad4e, 1px 0 #f0ad4e, 0 -1px #f0ad4e;
+}
+
+#temperature-text {
+	font-size: 60px;
+	font-style: oblique;
+	color: #656565;
+}
+
+#wind-text {
+	font-size: 40px;
+	font-style: oblique;
+	color: #656565;
+}

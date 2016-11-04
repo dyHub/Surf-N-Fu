@@ -6,7 +6,6 @@ exports.view = function(req, res){
     var activity = req.params.activity;
     var mapLink = '/map/' + activity;
     var weatherLink = "/weather/" + activity;
-
     var beachJson = require("../public/json/beaches.json");
 
     console.log("activity is " + activity);
@@ -14,8 +13,6 @@ exports.view = function(req, res){
     if(beach){
         var thisBeach = beachJson['beaches'][beach];
         var image = thisBeach['images'][0];
-        console.log("image");
-        console.log(image);
         res.render('review_beach', {
             'activity': activity,
             'weatherLink': weatherLink,

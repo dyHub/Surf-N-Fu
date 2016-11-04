@@ -2,11 +2,21 @@
   "beaches": {
     "blacks": {
       "id": 0,
-      "name": "Black's Beach"
+      "name": "Black's Beach",
+      "description": ["Black's Beach, formally known as Torrey Pines City Beach and Torrey Pines State Beach, is jointly owned by the City of San Diego and the State of California.\n",
+        "Black's Beach is a 2-mile long, sandy strip situated at the base of majestic 300 foot cliffs. The glider port atop the cliffs overlooks the beach where hang gliders,",
+        "paragliders and remote controlled gliders can often be seen soaring.\n"
+      ]
     },
     "pool": {
       "id": 1,
-      "name":"Children's Pool"
+      "name":"Children's Pool",
+      "description": ["The Children's Pool is a small beach partially protected by a seawall. The original intention was to create a fully protected swimming area,",
+        "but in recent years sand has filled in much of the area inside the wall.\n",
+        "This is a popular beach for scuba divers because of the reefs just offshore. ",
+        "These same reefs can create very strong currents and other hazards, particularly in high surf conditions.\n",
+        "This has also become a popular viewing area for harbor seals.  ",
+        "Seals and occasionally seal lions haul out on the beach to rest year-round.\n"]
     },
     "cove": {
       "id": 2,

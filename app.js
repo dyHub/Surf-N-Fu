@@ -49,6 +49,7 @@ app.get('/', index.view);
 app.get('/map/:activity', map.view);
 app.get('/weather/:activity', weather.view);
 app.get('/review/:activity', review.view);
+app.get('/review/:activity/:beach', review.view);
 app.get('/login/', login.view);
 app.get('/signup/', signup.view);
 

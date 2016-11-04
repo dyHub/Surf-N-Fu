@@ -1,0 +1,49 @@
+{
+  "beaches": {
+    "blacks": {
+      "id": 0,
+      "name": "Black's Beach"
+    },
+    "pool": {
+      "id": 1,
+      "name":"Children's Pool"
+    },
+    "cove": {
+      "id": 2,
+      "name": "La Jolla Cove"
+    },
+    "shores": {
+      "id": 3,
+      "name":"La Jolla Shores"
+    },
+    "mbay": {
+      "id": 4,
+      "name": "Mission Bay Beaches"
+    },
+    "mb": {
+      "id": 5,
+      "name":"Mission Beach"
+    },
+    "northpb": {
+      "id": 6,
+      "name": "North Pacific Beach"
+    },
+    "ob": {
+      "id": 7,
+      "name":"Ocean Beach"
+    },
+    "pb": {
+      "id": 8,
+      "name": "Pacific Beach"
+    },
+    "smb": {
+      "id": 9,
+      "name":"South Mission Beach"
+    },
+    "windan": {
+      "id": 10,
+      "name": "Windansea Beach"
+    }
+  }
+}
+

@@ -12,12 +12,17 @@ exports.view = function(req, res){
     console.log("activity is " + activity);
     var beach = req.params.beach;
     if(beach){
+        var thisBeach = beachJson['beaches'][beach];
+        var image = thisBeach['images'][0];
+        console.log("image");
+        console.log(image);
         res.render('review_beach', {
             'activity': activity,
             'weatherLink': weatherLink,
             'mapLink': mapLink,
-            'beachName': beachJson["beaches"][beach]["name"],
-            'description': beachJson["beaches"][beach]["description"].join('')
+            'beachName': thisBeach["name"],
+            'description': thisBeach["description"].join(''),
+            'image': image
         });
     } else {
         res.render('review', {

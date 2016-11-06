@@ -18,44 +18,44 @@
 </head>
 
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand text-uppercase" href="#">{{activity}}</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href={{mapLink}}>Map</a></li>
-                <li><a href={{weatherLink}}>Weather</a></li>
-                <li class="active"><a href="#">Reviews</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="container">
-
-    <div class="row" style="padding-top:50px">
-        <h1>{{beachName}}</h1>
-        <br/><br/><br/>
-        <div class="col-sm-6"><img src={{image}} height="400px" width="500px"/></div>
-        <div class="col-sm-4">
-            <div class="row">
-                <img src="/images/cloud.png" height="200px" width="220px"/>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-uppercase" href="#">{{activity}}</a>
             </div>
-            <div id="temperature-text">73°F</div>
-            <div id="wind-text">2mph</div>
-            <div class="row">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href={{mapLink}}>Map</a></li>
+                    <li><a href={{weatherLink}}>Weather</a></li>
+                    <li class="active"><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row" style="padding-top:50px">
+            <h1>{{beachName}}</h1>
+            <br/><br/><br/>
+            <div class="col-sm-6"><img src={{image}} height="400px" width="500px"/></div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <img src="/images/cloud.png" height="200px" width="220px"/>
+                </div>
+                <div id="temperature-text">73°F</div>
+                <div id="wind-text">2mph</div>
+                <div class="row">
                 <span class="rating">
                     <span>&#9734</span>
                     <span>&#9733</span>
@@ -63,69 +63,69 @@
                     <span>&#9733</span>
                     <span>&#9733</span>
                 </span>
+                </div>
             </div>
+
+        </div>
+        <div>
+            <p id="displayStatus">Current Status:<p>
+            <p id="currStatus">Unknown</p>
         </div>
 
-    </div>
-    <div>
-        <p id="displayStatus">Current Status:<p>
-        <p id="currStatus">Unknown</p>
-    </div>
+        <br>
 
-    <br>
+        <!-- Crowd source buttons -->
+        <a type="button" class="btn btn-lg btn-primary" onclick="return emptyFunc()">Empty</a>
+        <a type="button" class="btn btn-lg btn-primary" onclick="slightlyFunc();">Slightly Crowded</a>
+        <a type="button" class="btn btn-lg btn-primary" onclick="crowdedFunc();">Crowded</a>
 
-    <!-- Crowd source buttons -->
-    <a type="button" class="btn btn-lg btn-primary" onclick="return emptyFunc()">Empty</a>
-    <a type="button" class="btn btn-lg btn-primary" onclick="slightlyFunc();">Slightly Crowded</a>
-    <a type="button" class="btn btn-lg btn-primary" onclick="crowdedFunc();">Crowded</a>
+        <p> *This page is crowd-sourced and will display the status that has the most votes.</p>
 
-    <p> *This page is crowd-sourced and will display the status that has the most votes.</p>
+        <div class="row" style="padding-top:50px">
+            <h2>Here is something you should know about {{beachName}}</h2>
+            <p>{{description}}</p>
+        </div>
 
-    <div class="row" style="padding-top:50px">
-        <h2>Here is something you should know about {{beachName}}</h2>
-        <p>{{description}}</p>
-    </div>
-
-    <div class="row" style="padding-top:50px; padding-bottom:150px">
-        <h2>Recent Comment</h2>
-        <div class="row" style="padding-left:25px; padding-top:25px">
-            <img src="https://scontent-lax3-1.xx.fbcdn.net/t31.0-1/c362.106.1324.1324/s960x960/901021_698252210200208_1625585185_o.jpg"
-                 height="25px" width="25px" align="left"/>
-            <h4>&nbsp;&nbsp;Paul Superman</h4>
-            <span style="color: orange; font-size: 20px">
+        <div class="row" style="padding-top:50px; padding-bottom:150px">
+            <h2>Recent Comment</h2>
+            <div class="row" style="padding-left:25px; padding-top:25px">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/t31.0-1/c362.106.1324.1324/s960x960/901021_698252210200208_1625585185_o.jpg"
+                     height="25px" width="25px" align="left"/>
+                <h4>&nbsp;&nbsp;Paul Superman</h4>
+                <span style="color: orange; font-size: 20px">
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9734</span>
             </span>
-            <p>This place is awesome!! </p>
-            <a href="#" class="btn-link">Useful</a>
-            &nbsp;
-            <a href="#" class="btn-link">Funny</a>
-        </div>
-        <div class="row" style="padding-left:25px; padding-top:25px">
-            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12508907_10203998880412846_5097805872594803245_n.jpg?oh=05cd5bc9a3bf2d72a592d2daccd1c341&oe=58D21EFD"
-                 height="25px" width="25px" align="left"/>
-            <h4>&nbsp;&nbsp;Vania Vanilla</h4>
-            <span style="color: orange; font-size: 20px">
+                <p>This place is awesome!! </p>
+                <a href="#" class="btn-link">Useful</a>
+                &nbsp;
+                <a href="#" class="btn-link">Funny</a>
+            </div>
+            <div class="row" style="padding-left:25px; padding-top:25px">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12508907_10203998880412846_5097805872594803245_n.jpg?oh=05cd5bc9a3bf2d72a592d2daccd1c341&oe=58D21EFD"
+                     height="25px" width="25px" align="left"/>
+                <h4>&nbsp;&nbsp;Vania Vanilla</h4>
+                <span style="color: orange; font-size: 20px">
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9733</span>
                 <span>&#9733</span>
             </span>
-            <p>I love this place! </p><p>I wish I can stay here everyday!</p>
-            <a href="#" class="btn-link">Useful</a>
-            &nbsp;
-            <a href="#" class="btn-link">Funny</a>
+                <p>I love this place! </p><p>I wish I can stay here everyday!</p>
+                <a href="#" class="btn-link">Useful</a>
+                &nbsp;
+                <a href="#" class="btn-link">Funny</a>
+            </div>
         </div>
+
     </div>
 
-</div>
-
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 </html>

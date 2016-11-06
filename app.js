@@ -39,6 +39,9 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+// set the view engine to ejs
+//app.set('view engine', 'ejs');
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

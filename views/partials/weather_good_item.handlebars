@@ -4,14 +4,16 @@
         <div class="col-sm-8">
             <div class="timeline-heading">
                 <h4 class="timeline-title" style="color: #007be9">Good Condition</h4>
-                <p><big class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{time}}  </big></p>
+                <p><large class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{weather.FCTTIME.civil}}, {{weather.FCTTIME.mon_abbrev}} {{weather.FCTTIME.mday}}</large></p>
                 <p id="wind-text">High Tide</p>
+                <p id="wind-text">WSPD: {{weather.wspd.english}}mph</p>
+                <p id="wind-text">Humidity: {{weather.humidity}}%</p>
             </div>
         </div>
         <div class="col-sm-4">
-            <img src="/images/sunny.png" height="55px" width="55px"/>
-            <p id="temperature-text">74°F</p>
-            <p id="wind-text">4mph</p>
+            <img src={{weather.icon_url}} height="55px" width="55px"/>
+            <p id="temperature-text">{{weather.condition}}</p>
+            <p id="temperature-text">{{weather.temp.english}}°F</p>
         </div>
     </div>
 </li>

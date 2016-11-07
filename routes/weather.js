@@ -9,16 +9,29 @@ exports.view = function(req, res){
     var reviewLink = '/review/' + activity;
     var beachJson = require("../public/json/beaches.json");
     var beaches = beachJson['beaches'];
+    var weatherKey = process.env.WUKEY;
+    var request = require("request");
 
-    console.log("activity is " + activity);
-    console.log("beaches " + beaches);
-
-    res.render('weather', {
-        'activity': activity,
-        'mapLink': mapLink,
-        'weatherLink': weatherLink,
-        'reviewLink': reviewLink,
-        'beaches': beaches,
-        'isWeather': true
+    var weatherUrl = "http://api.wunderground.com/api/" + weatherKey + "/hourly10day/q/" + beaches['blacks']['latitude'] + "," + beaches['blacks']['longitude'] +".json";
+    request({
+        url: weatherUrl,
+        json: true
+    }, function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            var weatherData = body['hourly_forecast'];
+            res.render('weather', {
+                'activity': activity,
+                'mapLink': mapLink,
+                'weatherLink': weatherLink,
+                'reviewLink': reviewLink,
+                'beaches': beaches,
+                'weatherData': weatherData,
+                'isWeather': true
+            });
+        } else {
+            console.log("error");
+            console.log(error);
+        }
     });
+
 };

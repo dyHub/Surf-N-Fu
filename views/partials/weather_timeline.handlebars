@@ -1,13 +1,27 @@
 <div style="display:inline-block;width:100%;overflow-y:auto;">
     <ul class="timeline timeline-horizontal">
-        {{> weather_bad_item time='10:00 am'}}
-        {{> weather_neutral_item time='11:00 am'}}
-        {{> weather_good_item time='12:00 pm'}}
-        {{> weather_good_item time='1:00 pm'}}
-        {{> weather_neutral_item time='2:00 pm'}}
-        {{> weather_good_item time='3:00 pm'}}
-        {{> weather_not_good_item time='4:00 pm'}}
-        {{> weather_not_good_item time='5:00 pm'}}
-        {{> weather_bad_item time='6:00 pm'}}
+        {{#each weatherData}}
+            {{#ifCond this.temp.english "<=" 85}}
+                {{> weather_good_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english ">" 85}}
+                {{> weather_neutral_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english "<" 75}}
+                {{> weather_neutral_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english ">" 92}}
+                {{> weather_poor_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english "<" 65}}
+                {{> weather_poor_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english ">" 100}}
+                {{> weather_bad_item weather=this}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english "<" 60}}
+                {{> weather_bad_item weather=this}}
+            {{/ifCond}}
+        {{/each}}
     </ul>
 </div>

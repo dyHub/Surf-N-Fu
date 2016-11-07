@@ -17,7 +17,6 @@
 </head>
 <body>
     {{> navigation}}
-
     <div class="container" style="padding-top: 50px">
         {{#each beaches}}
             <div class="row">
@@ -25,7 +24,7 @@
                     <div class="page-header">
                         <h1>{{this.name}}</h1>
                     </div>
-                    {{> weather_timeline}}
+                    {{> weather_timeline weatherData=@root.weatherData}}
                 </div>
             </div>
         {{/each}}

@@ -29,10 +29,13 @@
             <div class="col-sm-6"><img src={{image}} height="400px" width="500px"/></div>
             <div class="col-sm-4">
                 <div class="row">
-                    <img src="/images/cloud.png" height="200px" width="220px"/>
+                    <img src={{weatherData.icon_url}} height="110px" width="110px"/>
                 </div>
-                <div id="temperature-text">73°F</div>
-                <div id="wind-text">2mph</div>
+                <div id="temperature-text">{{weatherData.temp_f}}°F</div>
+                <div id="temperature-text">{{weatherData.temp_c}}°C</div>
+                <div id="wind-text">Wind Speed: {{weatherData.wind_mph}}mph</div>
+                <div id="wind-text">Relative Humidity: {{weatherData.relative_humidity}}</div>
+                <div id="wind-text">Visibility: {{weatherData.visibility_mi}} mi</div>
                 <div class="row">
                 <span class="rating">
                     <span>&#9734</span>
@@ -64,6 +67,8 @@
             <p>{{description}}</p>
         </div>
 
+
+        <!-- Comments -->
         <div class="row" style="padding-top:50px; padding-bottom:150px">
             <h2>Recent Comment</h2>
             <div class="row" style="padding-left:25px; padding-top:25px">

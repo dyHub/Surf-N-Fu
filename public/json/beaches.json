@@ -8,7 +8,9 @@
         "Black's Beach is a 2-mile long, sandy strip situated at the base of majestic 300 foot cliffs. ",
         "The glider port atop the cliffs overlooks the beach where hang gliders,",
         "paragliders and remote controlled gliders can often be seen soaring.\n"],
-      "images":["http://cdn.c.photoshelter.com/img-get2/I0000KbLlnZGo2As/fit=1000x750/Blacks-Beach-San-Diego.jpg"]
+      "images":["http://cdn.c.photoshelter.com/img-get2/I0000KbLlnZGo2As/fit=1000x750/Blacks-Beach-San-Diego.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "pool": {
       "id": 1,
@@ -20,7 +22,9 @@
         "These same reefs can create very strong currents and other hazards, particularly in high surf conditions.\n",
         "This has also become a popular viewing area for harbor seals.  ",
         "Seals and occasionally seal lions haul out on the beach to rest year-round.\n"],
-      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/chldpht1.jpg"]
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/chldpht1.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "cove": {
       "id": 2,
@@ -32,7 +36,9 @@
         "La Jolla Cove lies within the San Diego La Jolla Underwater Park Ecological Reserve, ",
         "which helps to ensure that marine life remains plentiful. ",
         "Fishing and removal of objects from this area is prohibited, and possession of game is unlawful.\n"],
-      "images":["https://www.choicehotels.com/cms/images/choice-hotels/attractions/533807-La-Jolla-Cove/533807-La-Jolla-Cove.jpg"]
+      "images":["https://www.choicehotels.com/cms/images/choice-hotels/attractions/533807-La-Jolla-Cove/533807-La-Jolla-Cove.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "shores": {
       "id": 3,
@@ -41,7 +47,9 @@
         "In summer, waves at this beach are usually the most gentle of all San Diego beaches.\n",
         "La Jolla Shores is adjacent to the San Diego La Jolla Underwater Park Ecological Reserve. ",
         "Fishing and removal of objects from this area is prohibited and possession of game is unlawful.\n"],
-      "images":["http://blog.forbestravelguide.com/wp-content/uploads/2012/02/2.La-Jolla-Shores-Beach5.jpg"]
+      "images":["http://blog.forbestravelguide.com/wp-content/uploads/2012/02/2.La-Jolla-Shores-Beach5.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "mbay": {
       "id": 4,
@@ -54,7 +62,9 @@
         "San Diego Bay. In 1944, civic leaders began a series of steps to dredge the marsh and create an aquatic recreation facility.\n",
         "Today, you will find that Mission Bay is used by motor and sail boaters, rowers, waterskiers, picnickers, joggers and swimmers.\n",
         "It is also home to many species of birds, fish, and other animals and has a nature reserve at its northern end near Crown Point.\n"],
-      "images":["https://holidayhouses.tmcdn.co.nz/hh/full/45/2616145.jpg"]
+      "images":["https://holidayhouses.tmcdn.co.nz/hh/full/45/2616145.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "mb": {
       "id": 5,
@@ -63,7 +73,9 @@
         "Mission Beach is at the center of the Golden Strand, between South Mission Beach and Pacific Beach.\n",
         "One of the most popular beach areas in the City of San Diego, ",
         "Mission Beach draws large crowds in the summer to its oceanfront and adjacent Belmont Park.\n"],
-      "images":["http://www.paradisepoint.com/images/mcc/scrapbook/1402081275mission%20beach.jpg"]
+      "images":["http://www.paradisepoint.com/images/mcc/scrapbook/1402081275mission%20beach.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "northpb": {
       "id": 6,
@@ -73,7 +85,9 @@
         "the boardwalk traversing the cliff-top along much of the south end of the beach. \n",
         "At the north end of the beach is Tourmaline Surfing Park which includes a public parking lot, ",
         "showers and restrooms. This area is heavily used by surfers, kite surfers and sailboarders year round\n"],
-      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/northpbtower.jpg"]
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/northpbtower.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "ob": {
       "id": 7,
@@ -88,14 +102,18 @@
         "The Ocean Beach Municipal Pier is at the south end of the beach and is available to the public for walking and fishing. ",
         "Fishing from the pier does not require a fishing license, but catch regulations (including minimum size, ",
         "bag limits and seasons) are enforced. There is also a restaurant and bait shop on the pier.\n"],
-      "images": ["https://s-media-cache-ak0.pinimg.com/originals/ab/6b/3e/ab6b3eee536d2fb76806347b8806b880.jpg"]
+      "images": ["https://s-media-cache-ak0.pinimg.com/originals/ab/6b/3e/ab6b3eee536d2fb76806347b8806b880.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "pb": {
       "id": 8,
       "name": "Pacific Beach",
       "description":["Located just south of Crystal Pier, Pacific Beach extends south before becoming Mission Beach.\n",
         " One of the busiest beach areas in San Diego, Pacific Beach draws large crowds of locals and tourists in the summer.\n"],
-      "images":["http://www.sandiego.com/sites/sandiego.com/files/styles/gallery_listing_full/public/content/gallery/images/pacific_beach_wind_surfers.jpg?itok=T4zsdl1k"]
+      "images":["http://www.sandiego.com/sites/sandiego.com/files/styles/gallery_listing_full/public/content/gallery/images/pacific_beach_wind_surfers.jpg?itok=T4zsdl1k"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "smb": {
       "id": 9,
@@ -106,7 +124,9 @@
         "South Mission also has the only oceanfront area dedicated to playing 'Over-The-Line'. ",
         "The southern end of the cement boardwalk running the length of the ",
         "Golden Strand is located in the eastern portion of the parking lot.\n"],
-      "images":["http://media.sdreader.com/img/photos/2015/04/13/Jetty_t658.jpeg?ff95ca2b4c25d2d6ff3bfb257febf11d604414e5"]
+      "images":["http://media.sdreader.com/img/photos/2015/04/13/Jetty_t658.jpeg?ff95ca2b4c25d2d6ff3bfb257febf11d604414e5"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     },
     "windan": {
       "id": 10,
@@ -114,7 +134,9 @@
       "description":["The rocky shore of Windansea Beach is perhaps best known for its beautiful scenery and surf breaks created by underwater reefs.\n",
         "Much of Windansea experiences moderate to severe shore break, a condition on steep beaches which results in hard breaking surf right at the shoreline. ",
         "This makes it a popular location for surfing, however, swimmers should enter and exit the water carefully to prevent potentially serious injury.\n"],
-      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/winsea.jpg"]
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/winsea.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
     }
   }
 }

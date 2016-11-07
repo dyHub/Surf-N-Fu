@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "ejs": "^1.0.0",
     "express": "3.x",
     "express-handlebars": "*",
     "method-override": "^2.3.6",
     "minimatch": "3.0.2",
     "mongodb": "*",
     "mongoose": "*",
-    "ejs": "^1.0.0"
+    "request": "^2.78.0"
   },
   "engines": {
     "node": "0.10.x"

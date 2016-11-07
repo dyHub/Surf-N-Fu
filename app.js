@@ -26,7 +26,6 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 var hbs = handlebars.create({
     partialsDir: [
-        'shared/templates/',
         'views/partials/'
     ]
 });

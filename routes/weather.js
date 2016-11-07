@@ -25,7 +25,7 @@ exports.view = function(req, res){
                 'weatherLink': weatherLink,
                 'reviewLink': reviewLink,
                 'beaches': beaches,
-                'weatherData': weatherData,
+                'weatherData': weatherData.slice(0, 48),
                 'isWeather': true
             });
         } else {

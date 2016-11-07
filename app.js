@@ -6,7 +6,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express-handlebars')
+var handlebars = require('express-handlebars');
 
 var index = require('./routes/index');
 var map = require('./routes/map');
@@ -16,6 +16,7 @@ var login = require('./routes/login');
 var signup = require('./routes/signup');
 var app = express();
 
+
 // Fixing deprecated methodOverride
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -23,7 +24,13 @@ var methodOverride = require('method-override');
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+var hbs = handlebars.create({
+    partialsDir: [
+        'shared/templates/',
+        'views/partials/'
+    ]
+});
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -41,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set the view engine to ejs
 //app.set('view engine', 'ejs');
+//handlebars.registerPartial(__dirname + 'views/partials/footer.handlebars');
 
 // development only
 if ('development' == app.get('env')) {

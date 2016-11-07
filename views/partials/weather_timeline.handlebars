@@ -1,27 +1,48 @@
 <div style="display:inline-block;width:100%;overflow-y:auto;">
     <ul class="timeline timeline-horizontal">
         {{#each weatherData}}
-            {{#ifCond this.temp.english "<=" 85}}
-                {{> weather_good_item weather=this}}
-            {{/ifCond}}
-            {{#ifCond this.temp.english ">" 85}}
-                {{> weather_neutral_item weather=this}}
-            {{/ifCond}}
-            {{#ifCond this.temp.english "<" 75}}
-                {{> weather_neutral_item weather=this}}
-            {{/ifCond}}
-            {{#ifCond this.temp.english ">" 92}}
-                {{> weather_poor_item weather=this}}
-            {{/ifCond}}
-            {{#ifCond this.temp.english "<" 65}}
-                {{> weather_poor_item weather=this}}
-            {{/ifCond}}
-            {{#ifCond this.temp.english ">" 100}}
-                {{> weather_bad_item weather=this}}
-            {{/ifCond}}
+
+            <!-- bad: temp < 60 || temp >= 100 -->
             {{#ifCond this.temp.english "<" 60}}
                 {{> weather_bad_item weather=this}}
             {{/ifCond}}
+            {{#ifCond this.temp.english ">=" 100}}
+                {{> weather_bad_item weather=this}}
+            {{/ifCond}}
+
+            <!-- poor: temp >= 60 && temp < 65
+                    || temp > 92 && temp < 100 -->
+            {{#ifCond this.temp.english ">=" 60}}
+                {{#ifCond this.temp.english "<" 65}}
+                    {{> weather_poor_item weather=this}}
+                {{/ifCond}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english ">" 92}}
+                {{#ifCond this.temp.english "<" 100}}
+                    {{> weather_poor_item weather=this}}
+                {{/ifCond}}
+            {{/ifCond}}
+
+            <!-- neutral: temp >=65 && temp <72
+                       || temp > 85 && temp <=92 -->
+            {{#ifCond this.temp.english ">=" 65}}
+                {{#ifCond this.temp.english "<" 72}}
+                    {{> weather_neutral_item weather=this}}
+                {{/ifCond}}
+            {{/ifCond}}
+            {{#ifCond this.temp.english ">" 85}}
+                {{#ifCond this.temp.english "<=" 92}}
+                    {{> weather_neutral_item weather=this}}
+                {{/ifCond}}
+            {{/ifCond}}
+
+            <!-- good: temp >=72 && temp <=85 -->
+            {{#ifCond this.temp.english ">=" 72}}
+                {{#ifCond this.temp.english "<=" 85}}
+                    {{> weather_good_item weather=this}}
+                {{/ifCond}}
+            {{/ifCond}}
+
         {{/each}}
     </ul>
 </div>

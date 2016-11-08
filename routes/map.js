@@ -12,11 +12,6 @@ exports.view = function(req, res){
     var googleAPI = "https://maps.googleapis.com/maps/api/js?key=" + googleKey + "&callback=initMap"
     var beachJson = require("../public/json/beachesArr.json");
 
-
-    /*for(var i = 0; i < 12; i++) {
-        console.log("BEACH NAME IS " + beachJson['beaches'][i]['name']);
-    }*/
-
     console.log("activity is " + activity);
     res.render('map', {
         'activity': activity,

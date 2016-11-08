@@ -1,0 +1,157 @@
+{
+  "beaches": [
+    {
+      "id": 0,
+      "name": "Torrey Pines Beach",
+      "description": ["Torrey Pines Beach, a popular California State Beach, ",
+        "is located just south of Del Mar in San Diego, California. ",
+        "This easy access San Diego beach is popular with families. ",
+        "From Interstate 5 go west on Carmel Valley Rd, park on left or ",
+        "turn left on North Torrey Pines Rd. for closer parking. Click on the ",
+        "link below for pictures, more information, and detailed parking and driving ",
+        "directions to Torrey Pines State Beach in San Diego, CA."],
+      "images":["http://www.dreamlajolla.com/gfx/photos/tp-05.jpg"],
+      "latitude": 32.934599,
+      "longitude":  -117.260997
+    },
+    {
+      "id": 1,
+      "name": "Black's Beach",
+      "description": ["Black's Beach, formally known as Torrey Pines City Beach and Torrey Pines State Beach, ",
+        "is jointly owned by the City of San Diego and the State of California.\n",
+        "Black's Beach is a 2-mile long, sandy strip situated at the base of majestic 300 foot cliffs. ",
+        "The glider port atop the cliffs overlooks the beach where hang gliders,",
+        "paragliders and remote controlled gliders can often be seen soaring.\n"],
+      "images":["http://cdn.c.photoshelter.com/img-get2/I0000KbLlnZGo2As/fit=1000x750/Blacks-Beach-San-Diego.jpg"],
+      "latitude": 32.887709,
+      "longitude": -117.253188
+    },
+    {
+      "id": 2,
+      "name":"Children's Pool",
+      "description": ["The Children's Pool is a small beach partially protected by a seawall. ",
+        "The original intention was to create a fully protected swimming area,",
+        "but in recent years sand has filled in much of the area inside the wall.\n",
+        "This is a popular beach for scuba divers because of the reefs just offshore. ",
+        "These same reefs can create very strong currents and other hazards, particularly in high surf conditions.\n",
+        "This has also become a popular viewing area for harbor seals.  ",
+        "Seals and occasionally seal lions haul out on the beach to rest year-round.\n"],
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/chldpht1.jpg"],
+      "latitude": 32.8477,
+      "longitude": -117.2783
+    },
+    {
+      "id": 3,
+      "name": "La Jolla Cove",
+      "description": ["La Jolla Cove is a very small beach, tucked between sandstone cliffs.\n",
+        "Because of its extraordinary beauty, La Jolla Cove is one of the most photographed beaches in Southern California.\n",
+        "With small surf in the summer months, the north facing La Jolla Cove is ideal for swimmers, ",
+        "snorkelers and scuba divers. Water visibility at the Cove can sometimes exceed 30 feet.\n",
+        "La Jolla Cove lies within the San Diego La Jolla Underwater Park Ecological Reserve, ",
+        "which helps to ensure that marine life remains plentiful. ",
+        "Fishing and removal of objects from this area is prohibited, and possession of game is unlawful.\n"],
+      "images":["https://www.choicehotels.com/cms/images/choice-hotels/attractions/533807-La-Jolla-Cove/533807-La-Jolla-Cove.jpg"],
+      "latitude": 32.8504,
+      "longitude": -117.2730
+    },
+    {
+      "id": 4,
+      "name":"La Jolla Shores",
+      "description": ["La Jolla Shores is a sandy beach approximately 1 mile long located in the community of La Jolla. ",
+        "In summer, waves at this beach are usually the most gentle of all San Diego beaches.\n",
+        "La Jolla Shores is adjacent to the San Diego La Jolla Underwater Park Ecological Reserve. ",
+        "Fishing and removal of objects from this area is prohibited and possession of game is unlawful.\n"],
+      "images":["http://blog.forbestravelguide.com/wp-content/uploads/2012/02/2.La-Jolla-Shores-Beach5.jpg"],
+      "latitude": 32.8590,
+      "longitude": -117.2557
+    },
+    {
+      "id": 5,
+      "name": "Mission Bay Beaches",
+      "description":["Mission Bay Park is the largest aquatic park of its kind in the country. ",
+        "It consists of over 4,600 acres in roughly equal parts land and water. Mission Bay boasts 27 miles of shoreline, ",
+        "19 of which are sandy beaches with eight locations designated as official swimming areas.\n",
+        "Mission Bay was originally named False Bay by Juan Rodriguez Cabrillo, who came upon it in 1542. ",
+        "In those days, it was a vast tidal marsh that could confuse mariners into believing it was the larger bay just to the south, ",
+        "San Diego Bay. In 1944, civic leaders began a series of steps to dredge the marsh and create an aquatic recreation facility.\n",
+        "Today, you will find that Mission Bay is used by motor and sail boaters, rowers, waterskiers, picnickers, joggers and swimmers.\n",
+        "It is also home to many species of birds, fish, and other animals and has a nature reserve at its northern end near Crown Point.\n"],
+      "images":["https://holidayhouses.tmcdn.co.nz/hh/full/45/2616145.jpg"],
+      "latitude": 32.777813,
+      "longitude": -117.226456
+    },
+    {
+      "id": 6,
+      "name":"Mission Beach",
+      "description":["Spanning just over a mile in length, ",
+        "Mission Beach is at the center of the Golden Strand, between South Mission Beach and Pacific Beach.\n",
+        "One of the most popular beach areas in the City of San Diego, ",
+        "Mission Beach draws large crowds in the summer to its oceanfront and adjacent Belmont Park.\n"],
+      "images":["http://www.paradisepoint.com/images/mcc/scrapbook/1402081275mission%20beach.jpg"],
+      "latitude": 32.7707,
+      "longitude": -117.2514
+    },
+    {
+      "id": 7,
+      "name": "North Pacific Beach",
+      "description":["North Pacific Beach extends approximately a mile north of Crystal Pier to Pacific Beach Point.\n",
+        "This beach is bordered by cliffs up to 75 feet in height with an extension of ",
+        "the boardwalk traversing the cliff-top along much of the south end of the beach. \n",
+        "At the north end of the beach is Tourmaline Surfing Park which includes a public parking lot, ",
+        "showers and restrooms. This area is heavily used by surfers, kite surfers and sailboarders year round\n"],
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/northpbtower.jpg"],
+      "latitude": 32.8395502,
+      "longitude": -117.27616990000001
+    },
+    {
+      "id": 8,
+      "name":"Ocean Beach",
+      "description":["Ocean Beach is located in the San Diego community of Ocean Beach. ",
+        "This is a wide beach, approximately 1 mile long and broken up by several rock jetties.\n",
+        "A volleyball area can be found near the north end of the beach.\n",
+        "Dog Beach, San Diego's only 24-hour beach for dogs, is a sandy area at the north end of the beach. ",
+        "This is a dog-run area where dogs are always permitted without a leash. ",
+        "Dog owners are responsible for control and clean-up of their dogs. ",
+        "Standard dog laws apply on other portions of Ocean Beach and are strictly enforced.\n",
+        "The Ocean Beach Municipal Pier is at the south end of the beach and is available to the public for walking and fishing. ",
+        "Fishing from the pier does not require a fishing license, but catch regulations (including minimum size, ",
+        "bag limits and seasons) are enforced. There is also a restaurant and bait shop on the pier.\n"],
+      "images": ["https://s-media-cache-ak0.pinimg.com/originals/ab/6b/3e/ab6b3eee536d2fb76806347b8806b880.jpg"],
+      "latitude": 32.7495,
+      "longitude": -117.2470
+    },
+    {
+      "id": 9,
+      "name": "Pacific Beach",
+      "description":["Located just south of Crystal Pier, Pacific Beach extends south before becoming Mission Beach.\n",
+        " One of the busiest beach areas in San Diego, Pacific Beach draws large crowds of locals and tourists in the summer.\n"],
+      "images":["http://www.sandiego.com/sites/sandiego.com/files/styles/gallery_listing_full/public/content/gallery/images/pacific_beach_wind_surfers.jpg?itok=T4zsdl1k"],
+      "latitude": 32.8025,
+      "longitude": -117.2356
+    },
+    {
+      "id": 10,
+      "name":"South Mission Beach",
+      "description":["South Mission Beach is located at the southern end of the ",
+        "Golden Strand which runs from Pacific Beach Point to the Mission Bay channel. ",
+        "Perhaps the widest beach in the city, it is a popular place for sports such as beach volleyball and basketball.\n",
+        "South Mission also has the only oceanfront area dedicated to playing 'Over-The-Line'. ",
+        "The southern end of the cement boardwalk running the length of the ",
+        "Golden Strand is located in the eastern portion of the parking lot.\n"],
+      "images":["http://media.sdreader.com/img/photos/2015/04/13/Jetty_t658.jpeg?ff95ca2b4c25d2d6ff3bfb257febf11d604414e5"],
+      "latitude": 32.7601127,
+      "longitude": -117.25228129999999
+    },
+    {
+      "id": 11,
+      "name": "Windansea Beach",
+      "description":["The rocky shore of Windansea Beach is perhaps best known for its beautiful scenery and surf breaks created by underwater reefs.\n",
+        "Much of Windansea experiences moderate to severe shore break, a condition on steep beaches which results in hard breaking surf right at the shoreline. ",
+        "This makes it a popular location for surfing, however, swimmers should enter and exit the water carefully to prevent potentially serious injury.\n"],
+      "images":["https://www.sandiego.gov/sites/default/files/legacy/lifeguards/graphics/winsea.jpg"],
+      "latitude": 32.8274,
+      "longitude": -117.2798
+    }
+  ]
+}
+

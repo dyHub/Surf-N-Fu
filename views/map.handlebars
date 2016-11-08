@@ -45,24 +45,62 @@
         <gcse:search></gcse:search>-->
     </div>
 
+<!-- <br>
+<br>
+<br>
+<div>
+{{#each arr}}
+<p>id: {{id}}, name: {{name}}, long: {{longitude}}, lat: {{latitude}} </p>
+{{/each}}
+</div> -->
+
     <div id="map">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1EhEF4usooyK7MHrN_nnbGQsD_Zk&hl=en" width="1280" height="800"></iframe>
+        <!--iframe src="https://www.google.com/maps/d/embed?mid=1EhEF4usooyK7MHrN_nnbGQsD_Zk&hl=en" width="1280" height="800"></iframe-->
     </div>
-    <!--  <script>
-        // function initMap() {
-        //   var map = new google.maps.Map(document.getElementById('map'), {
-        //     center: {lat: 32.786731, lng: -117.236312},
-        //     zoom: 10
-        //   });
-        //   var infoWindow = new google.maps.InfoWindow({map: map});
-        //   infoWindow.setPosition(map.getCenter());
-        //   infoWindow.setContent('Welcom to San Diego!');
-      </script>-->
+      <script>
+      //ajax $.get
+
+        function initMap() {
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 32.786731, lng: -117.236312},
+            zoom: 10
+          });
+
+          // var infoWindow = new google.maps.InfoWindow({map: map});
+          // infoWindow.setPosition(map.getCenter());
+          // infoWindow.setContent('Welcome to San Diego!');
+
+            var coord = {lat: 32.8274, lng: -117.2798};
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Beach</h1>'+
+                '<div id="bodyContent">'+
+                '</div>'+
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                   position: coord,
+                   map: map,
+                   icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+            });
+
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+
+          }
+
+      </script>
     <script async defer
             src={{googleAPI}}>
     </script>
-
-
+            
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </body>

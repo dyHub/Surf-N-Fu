@@ -10,6 +10,12 @@ exports.view = function(req, res){
     var image = "/images/" + activity + ".png";
     var googleKey = process.env.GOOGLEKEY;
     var googleAPI = "https://maps.googleapis.com/maps/api/js?key=" + googleKey + "&callback=initMap"
+    var beachJson = require("../public/json/beachesArr.json");
+
+
+    /*for(var i = 0; i < 12; i++) {
+        console.log("BEACH NAME IS " + beachJson['beaches'][i]['name']);
+    }*/
 
     console.log("activity is " + activity);
     res.render('map', {
@@ -19,7 +25,8 @@ exports.view = function(req, res){
         'reviewLink': reviewLink,
         'image': image,
         'googleAPI': googleAPI,
-        'isMap': true
+        'isMap': true,
+        'arr': beachJson['beaches']
     });
 };
 

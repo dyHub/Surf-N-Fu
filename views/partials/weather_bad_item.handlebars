@@ -7,8 +7,8 @@
                 <p><large class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{weather.FCTTIME.civil}}, {{weather.FCTTIME.mon_abbrev}} {{weather.FCTTIME.mday}}</large></p>
                 {{#each tide}}
                     {{#ifCond this.date.hour "==" ../weather.FCTTIME.hour_padded}}
-                        <p id="wind-text">{{this.data.type}}</p>
-                        <p id="wind-text">{{this.data.height}}</p>
+                        <p id="tide-text">{{this.data.type}}</p>
+                        <p id="tide-text">{{this.data.height}}</p>
                     {{/ifCond}}
                 {{/each}}
                 <p id="wind-text">WSPD: {{weather.wspd.english}}mph</p>

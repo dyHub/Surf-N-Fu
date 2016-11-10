@@ -13,8 +13,8 @@ exports.view = function(req, res){
     var request = require("request");
     var tideData = null;
     var weatherData = null;
-    var tideTimesFirst = {};
-    var tideTimesSecond = {};
+    var tideTimesFirst = [];
+    var tideTimesSecond = [];
 
     var weatherUrl = "http://api.wunderground.com/api/" + weatherKey + "/hourly10day/q/" + beaches['blacks']['latitude'] + "," + beaches['blacks']['longitude'] +".json";
     var tideUrl = "http://api.wunderground.com/api/" + weatherKey + "/tide/q/CA/San_Diego.json";
@@ -39,22 +39,22 @@ exports.view = function(req, res){
         if (tideData != null){
             // get the first 48 hours of tide information
             tideData = tideData.slice(0,16);
-            console.log("tideData");
-            console.log(tideData);
+            // console.log("tideData");
+            // console.log(tideData);
 
             // get the hash for first day
             for(var i=0; i<8; i++){
-                tideTimesFirst[tideData[i]['date']['hour']] = tideData[i];
+                tideTimesFirst[i] = tideData[i];
             }
-            console.log("tideTimesFirst");
-            console.log(tideTimesFirst);
+            // console.log("tideTimesFirst");
+            // console.log(tideTimesFirst);
 
             // get the hash for second day
             for(var j=8; j<16; j++){
-                tideTimesSecond[tideData[i]['date']['hour']] = tideData[j];
+                tideTimesSecond[8-j] = tideData[j];
             }
-            console.log("tideTimesSecond");
-            console.log(tideTimesSecond);
+            // console.log("tideTimesSecond");
+            // console.log(tideTimesSecond);
         } else {
             console.log("can't get tide data");
         }
@@ -75,7 +75,6 @@ exports.view = function(req, res){
                 } else {
                     console.log("can't get weather data");
                 }
-                //console.log(weatherData);
 
             } else {
                 console.log("error");

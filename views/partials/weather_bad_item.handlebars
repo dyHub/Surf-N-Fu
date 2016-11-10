@@ -5,7 +5,12 @@
             <div class="timeline-heading">
                 <h4 class="timeline-title" style="color: #c50000">Bad Condition</h4>
                 <p><large class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{weather.FCTTIME.civil}}, {{weather.FCTTIME.mon_abbrev}} {{weather.FCTTIME.mday}}</large></p>
-                <p id="wind-text">Low Tide</p>
+                {{#each tide}}
+                    {{#ifCond this.date.hour "==" ../weather.FCTTIME.hour_padded}}
+                        <p id="wind-text">{{this.data.type}}</p>
+                        <p id="wind-text">{{this.data.height}}</p>
+                    {{/ifCond}}
+                {{/each}}
                 <p id="wind-text">WSPD: {{weather.wspd.english}}mph</p>
                 <p id="wind-text">Humidity: {{weather.humidity}}%</p>
             </div>

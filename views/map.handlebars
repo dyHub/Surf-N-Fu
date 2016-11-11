@@ -77,7 +77,13 @@ var coord{{id}} = {lat: lati, lng: longi};
 
             var coordtest = {lat: 32.8274, lng: -117.2798};
 
-            var contentString = '<div id="content">'+
+            var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="110px" width="110px"/></div>'
+                    + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
+                    + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
+                    + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
+                    + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
+                    + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
+                    + '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
                 '<h4 id="firstHeading" class="firstHeading">{{name}}</h4>'+

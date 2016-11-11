@@ -9,7 +9,7 @@ function pullJSON(){
 	        console.log(data);
 			document.getElementById("uname").value = obj.username;
 			document.getElementById("password").value = obj.password;
-			window.location = "/";
+			window.location = "/logged";
 	    }
 	});
 }

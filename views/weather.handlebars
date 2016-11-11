@@ -24,13 +24,7 @@
                     <div class="page-header">
                         <h1>{{this.name}}</h1>
                     </div>
-                    {{#ifCond @index "<" 8}}
-                        {{> weather_timeline weatherData=@root.weatherData tideTime=@root.tideTimesFirst}}
-                    {{/ifCond}}
-                    {{#ifCond @index ">=" 8}}
-                        {{> weather_timeline weatherData=@root.weatherData tideTime=@root.tideTimesSecond}}
-                    {{/ifCond}}
-
+                    {{> weather_timeline weatherData=@root.weatherData }}
                 </div>
             </div>
         {{/each}}

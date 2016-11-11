@@ -70,30 +70,45 @@
           // var infoWindow = new google.maps.InfoWindow({map: map});
           // infoWindow.setPosition(map.getCenter());
           // infoWindow.setContent('Welcome to San Diego!');
+{{#each arr}}
+var lati = {{latitude}};
+var longi = {{longitude}};
+var coord{{id}} = {lat: lati, lng: longi};
 
-            var coord = {lat: 32.8274, lng: -117.2798};
+            var coordtest = {lat: 32.8274, lng: -117.2798};
+
             var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">Beach</h1>'+
+                '<h4 id="firstHeading" class="firstHeading">{{name}}</h4>'+
                 '<div id="bodyContent">'+
                 '</div>'+
                 '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
+            /*var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });*/
+
+            var infowindow{{id}} = new google.maps.InfoWindow({
               content: contentString
             });
 
             var marker = new google.maps.Marker({
-                   position: coord,
-                   map: map,
-                   icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+                   position: coordtest,
+                   map: map
+                   //icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
             });
 
-            marker.addListener('click', function() {
-              infowindow.open(map, marker);
+            var marker{{id}} = new google.maps.Marker({
+                               position: coord{{id}},
+                               map: map
+                   //icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
             });
 
+            marker{{id}}.addListener('click', function() {
+              infowindow{{id}}.open(map, marker{{id}});
+            });
+{{/each}}
           }
 
       </script>

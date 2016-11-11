@@ -57,8 +57,8 @@ function checkForm(form)
       return false;
     }
 
-    alert("You entered a valid password: " + form.pwd1.value);
-    return true;
+    alert("Your account has been created! Click on 'Sign up' to go back to the Home page");
+    //windows.location = "https://test-vanilla.herokuapp.com/";
   }
 
 $(document).ready(function () {

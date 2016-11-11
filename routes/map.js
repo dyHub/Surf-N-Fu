@@ -11,6 +11,7 @@ exports.view = function(req, res){
     var googleKey = process.env.GOOGLEKEY;
     var googleAPI = "https://maps.googleapis.com/maps/api/js?key=" + googleKey + "&callback=initMap"
     var beachJson = require("../public/json/beachesArr.json");
+    //console.log(beachJson);
 
     console.log("activity is " + activity);
     res.render('map', {

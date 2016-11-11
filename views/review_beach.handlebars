@@ -36,6 +36,8 @@
                 <div id="wind-text">Wind Speed: {{weatherData.wind_mph}}mph</div>
                 <div id="wind-text">Relative Humidity: {{weatherData.relative_humidity}}</div>
                 <div id="wind-text">Visibility: {{weatherData.visibility_mi}} mi</div>
+                <br>
+                <p>*Weather conditions may not show up due to too many requests</p>
                 <div class="row">
                 <span class="rating">
                     <span>&#9734</span>
@@ -48,8 +50,9 @@
             </div>
 
         </div>
+
         <div>
-            <p id="displayStatus">Current Status:<p>
+            <p id="displayStatus"><font size="4">Current Status:</font><p>
             <p id="currStatus">Unknown</p>
         </div>
 
@@ -102,7 +105,24 @@
                 <a href="#" class="btn-link">Useful</a>
                 &nbsp;
                 <a href="#" class="btn-link">Funny</a>
+
+                <br>
             </div>
+
+            <br><br>
+
+            <form id="addComment" role="form" method="get" action="/add">
+                <!--textarea rows = "4" cols = "100" placeholder="Write your review here..."></textarea-->
+                <input type="text" class="form-control" id="description" placeholder="Write your review here..." name="description">
+                <br>
+                <input class"btn btn-default" type="submit" value="Submit Review" onclick="popup();"></input>
+            </form>
+
+            <div class="popup">
+                <span class="popuptext" id="myPopup" >Your review has been recieved! The page will refresh.</span>
+            </div>
+
+            
         </div>
 
     </div>

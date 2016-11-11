@@ -9,9 +9,11 @@ var path = require('path');
 var handlebars = require('express-handlebars');
 
 var index = require('./routes/index');
+var logged = require('./routes/logged');
 var map = require('./routes/map');
 var weather = require('./routes/weather');
 var review = require('./routes/review');
+var addReview = require ('./routes/add');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
 var app = express();
@@ -84,12 +86,14 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/logged', logged.view);
 app.get('/map/:activity', map.view);
 app.get('/weather/:activity', weather.view);
 app.get('/review/:activity', review.view);
 app.get('/review/:activity/:beach', review.view);
-app.get('/login/', login.view);
-app.get('/signup/', signup.view);
+app.get('/login', login.view);
+app.get('/signup', signup.view);
+app.get('/add', addReview.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

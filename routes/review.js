@@ -9,7 +9,7 @@ exports.view = function(req, res){
     var reviewLink = '/review/' + activity;
     var beachJson = require("../public/json/beaches.json");
     var request = require("request");
-    var weatherKey = process.env.WUKEY;
+    var weatherKey = process.env.WUKEYBACKUP;
 
     console.log("activity is " + activity);
     var beach = req.params.beach;

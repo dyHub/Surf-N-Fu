@@ -33,28 +33,20 @@ exports.view = function(req, res){
 
 
     var successCallBack = function(body){
-        // console.log("body");
-        // console.log(body);
-        tideData = body['tide']['tideSummary'];
+        tideData = body['tide'];
         if (tideData != null){
             // get the first 48 hours of tide information
-            tideData = tideData.slice(0,16);
-            // console.log("tideData");
-            // console.log(tideData);
+            tideData = tideData['tideSummary'].slice(0,16);
 
             // get the hash for first day
             for(var i=0; i<8; i++){
                 tideTimesFirst[i] = tideData[i];
             }
-            // console.log("tideTimesFirst");
-            // console.log(tideTimesFirst);
 
             // get the hash for second day
             for(var j=8; j<16; j++){
                 tideTimesSecond[8-j] = tideData[j];
             }
-            // console.log("tideTimesSecond");
-            // console.log(tideTimesSecond);
         } else {
             console.log("can't get tide data");
         }

@@ -181,3 +181,9 @@
     font-style: oblique;
     color: #656565;
 }
+
+#tide-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #f26b00;
+}

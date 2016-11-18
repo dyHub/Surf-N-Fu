@@ -43,7 +43,7 @@ exports.view = function(req, res){
 
             // get the hash for second day
             for(var j=8; j<16; j++){
-                tideTimesSecond[8-j] = tideData[j];
+                tideTimesSecond[j-8] = tideData[j];
             }
         } else {
             console.log("can't get tide data");

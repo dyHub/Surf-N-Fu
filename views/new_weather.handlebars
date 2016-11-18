@@ -17,13 +17,26 @@
 </head>
 <body>
     <div class="container center-vertical">
-        <div class="row" style="padding-top: 100px">
+        <div class="row" style="padding-top: 50px">
             <div class="col-md-12">
                 <div class="page-header">
                     <h1>{{thisBeach.name}}</h1>
                 </div>
                 {{> new_weather_timeline}}
             </div>
+        </div>
+        <div class="row">
+            <h4>*Scroll to view 48 hours of surfing condition forecast for {{thisBeach.name}}</h4>
+        </div>
+        <div class="row">
+            <p><div><i class="glyphicon glyphicon-ban-circle"></i>: Bad Condition for Surfing</div></p>
+            <p><div><i class="glyphicon glyphicon-warning-sign"></i></div>: Poor Condition for Surfing</div></p>
+            <p><div><i class="glyphicon glyphicon-cloud"></i></div>: Neutral Condition for Surfing</div></p>
+            <p><div><i class="glyphicon glyphicon-heart"></i></div>: Good Condition for Surfing</div></p>
+        </div>
+        <hr/>
+        <div class="row" style="padding-bottom: 50px">
+            <a href="/new/surf" class="btn btn-info btn-bg pull-right">BACK</a>
         </div>
     </div>
 

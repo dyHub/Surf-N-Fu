@@ -4,7 +4,6 @@
         <div class="col-sm-8">
             <div class="timeline-heading">
                 <h4 class="timeline-title" style="color: #eabb02">Poor Condition</h4>
-                <p><large class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{weather.FCTTIME.civil}}, {{weather.FCTTIME.mon_abbrev}} {{weather.FCTTIME.mday}}</large></p>
                 {{#each tide}}
                     {{#ifCond this.date.hour "==" ../weather.FCTTIME.hour_padded}}
                         <p id="tide-text">{{this.data.type}}</p>
@@ -19,6 +18,9 @@
             <img src={{weather.icon_url}} height="55px" width="55px"/>
             <p id="temperature-text">{{weather.condition}}</p>
             <p id="temperature-text">{{weather.temp.english}}°F</p>
+        </div>
+        <div class="col-sm-12">
+            <p><big class="text-muted"><i class="glyphicon glyphicon-time"></i>  {{weather.FCTTIME.civil}}, {{weather.FCTTIME.mon_abbrev}} {{weather.FCTTIME.mday}}</big></p>
         </div>
     </div>
 </li>

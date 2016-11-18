@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COGS120/CSE170 Skeleton</title>
+    <link href = "/css/map.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="/js/map.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- <br>
+<br>
+<br>
+<div>
+{{#each arr}}
+<p>id: {{id}}, name: {{name}}, long: {{longitude}}, lat: {{latitude}} </p>
+{{/each}}
+</div> -->
+
+<div id="map">
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 32.786731, lng: -117.236312},
+                zoom: 10
+            });
+
+            var infowindowArray = [];
+
+            {{#each arr}}
+                var lati = {{latitude}};
+                var longi = {{longitude}};
+                var coord{{id}} = {lat: lati, lng: longi};
+
+                var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="110px" width="110px"/></div>'
+                        + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
+                        + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
+                        + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
+                        + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
+                        + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
+                        + '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h4 id="firstHeading" class="firstHeading">{{name}}</h4>'+
+                        '<div id="bodyContent">'+
+                        '</div>'+
+                        '</div>';
+
+                var infowindow{{id}} = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                var marker{{id}} = new google.maps.Marker({
+                    position: coord{{id}},
+                    map: map
+                });
+
+                marker{{id}}.addListener('click', function() {
+                    for(var i=0; i < infowindowArray.length; i++) {
+                        infowindowArray[i].close();
+                    }
+                    infowindow{{id}}.open(map, marker{{id}});
+                    infowindowArray.push(infowindow{{id}});
+                });
+            {{/each}}
+        }
+
+    </script>
+</div>
+
+<script async defer
+        src={{googleAPI}}>
+</script>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -16,6 +16,9 @@ var review = require('./routes/review');
 var addReview = require ('./routes/add');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
+
+var surf = require('./routes/surf');
+
 var app = express();
 
 
@@ -94,6 +97,9 @@ app.get('/review/:activity/:beach', review.view);
 app.get('/login', login.view);
 app.get('/signup', signup.view);
 app.get('/add', addReview.view);
+
+app.get('/new', index.view2);
+app.get('/new/surf', surf.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

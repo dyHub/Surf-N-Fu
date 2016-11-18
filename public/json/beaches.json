@@ -1,21 +1,8 @@
 {
   "beaches": {
-    "tp":{
-      "id": 0,
-      "name": "Torrey Pines Beach",
-      "description": ["Torrey Pines Beach, a popular California State Beach, ",
-        "is located just south of Del Mar in San Diego, California. ",
-        "This easy access San Diego beach is popular with families. ",
-        "From Interstate 5 go west on Carmel Valley Rd, park on left or ",
-        "turn left on North Torrey Pines Rd. for closer parking. Click on the ",
-        "link below for pictures, more information, and detailed parking and driving ",
-        "directions to Torrey Pines State Beach in San Diego, CA."],
-      "images":["http://www.dreamlajolla.com/gfx/photos/tp-05.jpg"],
-      "latitude": 32.934599,
-      "longitude":  -117.260997
-    },
+    
     "blacks": {
-      "id": 1,
+      "id": 0,
       "name": "Black's Beach",
       "description": ["Black's Beach, formally known as Torrey Pines City Beach and Torrey Pines State Beach, ",
         "is jointly owned by the City of San Diego and the State of California.\n",
@@ -27,7 +14,7 @@
       "longitude": -117.253188
     },
     "pool": {
-      "id": 2,
+      "id": 1,
       "name":"Children's Pool",
       "description": ["The Children's Pool is a small beach partially protected by a seawall. ",
         "The original intention was to create a fully protected swimming area,",
@@ -41,7 +28,7 @@
       "longitude": -117.2783
     },
     "cove": {
-      "id": 3,
+      "id": 2,
       "name": "La Jolla Cove",
       "description": ["La Jolla Cove is a very small beach, tucked between sandstone cliffs.\n",
         "Because of its extraordinary beauty, La Jolla Cove is one of the most photographed beaches in Southern California.\n",
@@ -55,7 +42,7 @@
       "longitude": -117.2730
     },
     "shores": {
-      "id": 4,
+      "id": 3,
       "name":"La Jolla Shores",
       "description": ["La Jolla Shores is a sandy beach approximately 1 mile long located in the community of La Jolla. ",
         "In summer, waves at this beach are usually the most gentle of all San Diego beaches.\n",
@@ -66,7 +53,7 @@
       "longitude": -117.2557
     },
     "mbay": {
-      "id": 5,
+      "id": 4,
       "name": "Mission Bay Beaches",
       "description":["Mission Bay Park is the largest aquatic park of its kind in the country. ",
         "It consists of over 4,600 acres in roughly equal parts land and water. Mission Bay boasts 27 miles of shoreline, ",
@@ -81,7 +68,7 @@
       "longitude": -117.226456
     },
     "mb": {
-      "id": 6,
+      "id": 5,
       "name":"Mission Beach",
       "description":["Spanning just over a mile in length, ",
         "Mission Beach is at the center of the Golden Strand, between South Mission Beach and Pacific Beach.\n",
@@ -92,7 +79,7 @@
       "longitude": -117.2514
     },
     "northpb": {
-      "id": 7,
+      "id": 6,
       "name": "North Pacific Beach",
       "description":["North Pacific Beach extends approximately a mile north of Crystal Pier to Pacific Beach Point.\n",
         "This beach is bordered by cliffs up to 75 feet in height with an extension of ",
@@ -104,7 +91,7 @@
       "longitude": -117.27616990000001
     },
     "ob": {
-      "id": 8,
+      "id": 7,
       "name":"Ocean Beach",
       "description":["Ocean Beach is located in the San Diego community of Ocean Beach. ",
         "This is a wide beach, approximately 1 mile long and broken up by several rock jetties.\n",
@@ -121,7 +108,7 @@
       "longitude": -117.2470
     },
     "pb": {
-      "id": 9,
+      "id": 8,
       "name": "Pacific Beach",
       "description":["Located just south of Crystal Pier, Pacific Beach extends south before becoming Mission Beach.\n",
         " One of the busiest beach areas in San Diego, Pacific Beach draws large crowds of locals and tourists in the summer.\n"],
@@ -130,7 +117,7 @@
       "longitude": -117.2356
     },
     "smb": {
-      "id": 10,
+      "id": 9,
       "name":"South Mission Beach",
       "description":["South Mission Beach is located at the southern end of the ",
         "Golden Strand which runs from Pacific Beach Point to the Mission Bay channel. ",
@@ -142,6 +129,22 @@
       "latitude": 32.7601127,
       "longitude": -117.25228129999999
     },
+
+    "tp":{
+      "id": 10,
+      "name": "Torrey Pines Beach",
+      "description": ["Torrey Pines Beach, a popular California State Beach, ",
+        "is located just south of Del Mar in San Diego, California. ",
+        "This easy access San Diego beach is popular with families. ",
+        "From Interstate 5 go west on Carmel Valley Rd, park on left or ",
+        "turn left on North Torrey Pines Rd. for closer parking. Click on the ",
+        "link below for pictures, more information, and detailed parking and driving ",
+        "directions to Torrey Pines State Beach in San Diego, CA."],
+      "images":["http://www.dreamlajolla.com/gfx/photos/tp-05.jpg"],
+      "latitude": 32.934599,
+      "longitude":  -117.260997
+    },
+
     "windan": {
       "id": 11,
       "name": "Windansea Beach",

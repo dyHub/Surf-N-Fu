@@ -3,7 +3,7 @@ exports.view = function(req, res){
     var request = require("request");
     var weatherKey = process.env.WUKEYBACKUP;
 
-    console.log("activity is " + activity);
+    //console.log("activity is " + activity);
     var beachID = req.params.id;
     var thisBeach = beachJson['beaches'][beachID];
     var image = thisBeach['images'][0];

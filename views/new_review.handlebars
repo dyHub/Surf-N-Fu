@@ -67,16 +67,15 @@
             <p>{{description}}</p>
         </div>
 
-
         <!-- Comments -->
 
         <div class="row" style="padding-top:50px; padding-bottom:150px">
 
-            <form id="addComment" role="form" method="get">
+            <form id="addComment" role="form" method="get" action="/add">
                 <!--textarea rows = "4" cols = "100" placeholder="Write your review here..."></textarea-->
                 <input type="text" class="form-control" id="description" placeholder="Write your review here..." name="description">
                 <br>
-                <input class="btn btn-default" type="submit" value="Submit Review">
+                <input class="btn btn-default" type="submit" value="Submit Review" onclick="popup();"></input>
             </form>
 
             <div class="popup">

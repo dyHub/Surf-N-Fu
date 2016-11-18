@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>COGS120/CSE170 Skeleton</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href = "/css/review.css" rel="stylesheet">
+    <script src="/js/review.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row" style="padding-top:50px">
+            <h1>{{beachName}}</h1>
+            <br/><br/><br/>
+            <div class="col-sm-6"><img src={{image}} height="400px" width="500px"/></div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <img src={{weatherData.icon_url}} height="110px" width="110px"/>
+                </div>
+                <div id="temperature-text">{{weatherData.temp_f}}°F</div>
+                <div id="temperature-text">{{weatherData.temp_c}}°C</div>
+                <div id="wind-text">Wind Speed: {{weatherData.wind_mph}}mph</div>
+                <div id="wind-text">Relative Humidity: {{weatherData.relative_humidity}}</div>
+                <div id="wind-text">Visibility: {{weatherData.visibility_mi}} mi</div>
+                <br>
+                <p>*Weather conditions may not show up due to too many requests</p>
+                <div class="row">
+                <span class="rating">
+                    <span>&#9734</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                </span>
+                </div>
+            </div>
+
+        </div>
+        
+        <div>
+            <p id="displayStatus"><font size="6">Current Status:</font></p>
+            <p id="currStatus" style="color:lightgreen"><font size="5">Empty</font></p>
+        </div>
+
+        <!-- This line fixing the space after status with the buttons -->
+        <br><br><br><p></p>
+
+        <!-- Crowd source buttons -->
+        <h4> Cast your vote!</h4>
+        <a type="button" class="btn btn-lg btn-primary" onclick="return emptyFunc()">Empty</a>
+        <a type="button" class="btn btn-lg btn-primary" onclick="slightlyFunc();">Slightly Crowded</a>
+        <a type="button" class="btn btn-lg btn-primary" onclick="crowdedFunc();">Crowded</a>
+
+        <p> *This page is crowd-sourced and will update based on votes.</p>
+        
+        <div class="row" style="padding-left: 10px; padding-top:10px;">
+            <h2>Here is something you should know about {{beachName}}</h2>
+            <p>{{description}}</p>
+        </div>
+
+
+        <!-- Comments -->
+
+        <div class="row" style="padding-top:50px; padding-bottom:150px">
+
+            <form id="addComment" role="form" method="get">
+                <!--textarea rows = "4" cols = "100" placeholder="Write your review here..."></textarea-->
+                <input type="text" class="form-control" id="description" placeholder="Write your review here..." name="description">
+                <br>
+                <input class="btn btn-default" type="submit" value="Submit Review">
+            </form>
+
+            <div class="popup">
+                <span class="popuptext" id="myPopup" >Your review has been received! The page will refresh.</span>
+            </div>
+
+            <h2>Recent Comment</h2>
+            
+            <div class="row" style="padding-left:25px; padding-top:25px">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/t31.0-1/c362.106.1324.1324/s960x960/901021_698252210200208_1625585185_o.jpg"
+                     height="25px" width="25px" align="left"/>
+                <h4>&nbsp;&nbsp;Paul Superman</h4>
+                <span style="color: orange; font-size: 20px">
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9734</span>
+            </span>
+                <p>This place is awesome!! </p>
+                <a href="#" class="btn-link">Useful</a>
+                &nbsp;
+                <a href="#" class="btn-link">Funny</a>
+            </div>
+            <div class="row" style="padding-left:25px; padding-top:25px">
+                <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12508907_10203998880412846_5097805872594803245_n.jpg?oh=05cd5bc9a3bf2d72a592d2daccd1c341&oe=58D21EFD"
+                     height="25px" width="25px" align="left"/>
+                <h4>&nbsp;&nbsp;Vania Vanilla</h4>
+                <span style="color: orange; font-size: 20px">
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9733</span>
+                <span>&#9733</span>
+            </span>
+                <p>I love this place! </p><p>I wish I can stay here everyday!</p>
+                <a href="#" class="btn-link">Useful</a>
+                &nbsp;
+                <a href="#" class="btn-link">Funny</a>
+
+                <br>
+            </div>
+
+            <br><br>
+            
+        </div>
+
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

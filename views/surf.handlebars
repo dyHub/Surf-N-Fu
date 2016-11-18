@@ -14,12 +14,9 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
-        /* Always set the map height explicitly to define the size of the div
-        * element that contains the map. */
         #map {
             height: 100%;
         }
-        /* Optional: Makes the sample page fill the window. */
         html, body {
             height: 100%;
             margin: 0;
@@ -28,22 +25,12 @@
     </style>
 </head>
 <body>
-
-<!-- <br>
-<br>
-<br>
-<div>
-{{#each arr}}
-<p>id: {{id}}, name: {{name}}, long: {{longitude}}, lat: {{latitude}} </p>
-{{/each}}
-</div> -->
-
 <div id="map">
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 32.786731, lng: -117.236312},
-                zoom: 10
+                center: {lat: 32.853215, lng: -117.258381},
+                zoom: 12
             });
 
             var infowindowArray = [];
@@ -53,19 +40,16 @@
                 var longi = {{longitude}};
                 var coord{{id}} = {lat: lati, lng: longi};
 
-                var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="110px" width="110px"/></div>'
+                var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="55px" width="55px"/></div>'
                         + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
                         + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
                         + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
                         + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
                         + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
-                        + '<div id="content">'+
-                        '<div id="siteNotice">'+
-                        '</div>'+
-                        '<h4 id="firstHeading" class="firstHeading">{{name}}</h4>'+
-                        '<div id="bodyContent">'+
-                        '</div>'+
-                        '</div>';
+                        + '<div id="content">'
+                        + '<h4>{{name}}</h4>'+ '</div>'
+                        + '<a href="/weather/surf" type="button" class="btn btn-info btn-sm">'
+                        + 'Weather Overview</a> &nbsp;&nbsp; '
 
                 var infowindow{{id}} = new google.maps.InfoWindow({
                     content: contentString

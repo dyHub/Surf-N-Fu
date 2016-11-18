@@ -70,10 +70,10 @@
           // var infoWindow = new google.maps.InfoWindow({map: map});
           // infoWindow.setPosition(map.getCenter());
           // infoWindow.setContent('Welcome to San Diego!');
-{{#each arr}}
-var lati = {{latitude}};
-var longi = {{longitude}};
-var coord{{id}} = {lat: lati, lng: longi};
+            {{#each arr}}
+            var lati = {{latitude}};
+            var longi = {{longitude}};
+            var coord{{id}} = {lat: lati, lng: longi};
 
             var coordtest = {lat: 32.8274, lng: -117.2798};
 
@@ -95,7 +95,7 @@ var coord{{id}} = {lat: lati, lng: longi};
               content: contentString
             });*/
 
-            var infowindow{{id}} = new google.maps.InfoWindow({
+            var infowindow = new google.maps.InfoWindow({
               content: contentString
             });
 
@@ -112,7 +112,7 @@ var coord{{id}} = {lat: lati, lng: longi};
             });
 
             marker{{id}}.addListener('click', function() {
-              infowindow{{id}}.open(map, marker{{id}});
+              infowindow.open(map, marker{{id}});
             });
 {{/each}}
           }

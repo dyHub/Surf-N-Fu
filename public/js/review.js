@@ -1,6 +1,6 @@
-    var empty = 0;
-    var slightly = 0;
-    var crowded = 0;
+    var empty = 10;
+    var slightly = 4;
+    var crowded = 3;
 
     function emptyFunc()
     {
@@ -9,7 +9,7 @@
       {
         status.style.color = "lightgreen";
         status.outline = 1;
-        status.innerHTML = "Empty";
+        status.innerHTML = "<font size='5'>Empty</font>";
 
       }
       empty++;
@@ -22,7 +22,7 @@
       if ((slightly>=empty && slightly >=crowded) || (empty==0 && slightly==0 && crowded==0)) 
       {
         status.style.color = "yellow";
-        status.innerHTML = "Slightly Crowded";
+        status.innerHTML = "<font size='5'>Slightly Crowded</font>";
       }    
       slightly++;
       console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
@@ -34,7 +34,7 @@
       if ((crowded>=empty && crowded >=slightly) || (empty==0 && slightly==0 && crowded==0)) 
       {
         status.style.color = "red";
-        status.innerHTML = "Crowded";
+        status.innerHTML = "<font size='5'>Crowded</font>";
       }     
       crowded++;
       console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);

@@ -50,22 +50,24 @@
             </div>
 
         </div>
-
+        
         <div>
-            <p id="displayStatus"><font size="4">Current Status:</font><p>
-            <p id="currStatus">Unknown</p>
+            <p id="displayStatus"><font size="6">Current Status:</font></p>
+            <p id="currStatus" style="color:lightgreen"><font size="5">Empty</font></p>
         </div>
 
-        <br>
+        <!-- This line fixing the space after status with the buttons -->
+        <br><br><br><p></p>
 
         <!-- Crowd source buttons -->
+        <h4> Cast your vote!</h4>
         <a type="button" class="btn btn-lg btn-primary" onclick="return emptyFunc()">Empty</a>
         <a type="button" class="btn btn-lg btn-primary" onclick="slightlyFunc();">Slightly Crowded</a>
         <a type="button" class="btn btn-lg btn-primary" onclick="crowdedFunc();">Crowded</a>
 
-        <p> *This page is crowd-sourced and will display the status that has the most votes.</p>
-
-        <div class="row" style="padding-top:50px">
+        <p> *This page is crowd-sourced and will update based on votes.</p>
+        
+        <div class="row" style="padding-left: 10px; padding-top:10px;">
             <h2>Here is something you should know about {{beachName}}</h2>
             <p>{{description}}</p>
         </div>

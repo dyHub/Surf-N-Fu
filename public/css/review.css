@@ -1,11 +1,14 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+
 
 #displayStatus {
 	float: left;
 	padding-right: 10px;
+}
+
+#currStatus {
+	float: left;
+	margin-top: 8px;
+   //-webkit-text-stroke: 1px gray;
 }
 
 .rating {

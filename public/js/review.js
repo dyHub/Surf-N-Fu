@@ -1,44 +1,44 @@
-    var empty = 10;
-    var slightly = 4;
-    var crowded = 3;
+var empty = 10;
+var slightly = 4;
+var crowded = 3;
 
-    function emptyFunc()
-    {
-      var status = document.getElementById("currStatus");
-      if ((empty>=slightly && empty >=crowded) || (empty==0 && slightly==0 && crowded==0)) 
-      {
-        status.style.color = "lightgreen";
-        status.outline = 1;
-        status.innerHTML = "<font size='5'>Empty</font>";
+function emptyFunc()
+{
+  var status = document.getElementById("currStatus");
+  if ((empty>=slightly && empty >=crowded) || (empty==0 && slightly==0 && crowded==0)) 
+  {
+    status.style.color = "lightgreen";
+    status.outline = 1;
+    status.innerHTML = "<font size='5'>Empty</font>";
 
-      }
-      empty++;
-      console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
-    }
+  }
+  empty++;
+  console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
+}
 
-    function slightlyFunc()
-    {
-      var status = document.getElementById("currStatus");
-      if ((slightly>=empty && slightly >=crowded) || (empty==0 && slightly==0 && crowded==0)) 
-      {
-        status.style.color = "yellow";
-        status.innerHTML = "<font size='5'>Slightly Crowded</font>";
-      }    
-      slightly++;
-      console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
-    }
+function slightlyFunc()
+{
+  var status = document.getElementById("currStatus");
+  if ((slightly>=empty && slightly >=crowded) || (empty==0 && slightly==0 && crowded==0)) 
+  {
+    status.style.color = "yellow";
+    status.innerHTML = "<font size='5'>Slightly Crowded</font>";
+  }    
+  slightly++;
+  console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
+}
 
-    function crowdedFunc()
-    {
-      var status = document.getElementById("currStatus");
-      if ((crowded>=empty && crowded >=slightly) || (empty==0 && slightly==0 && crowded==0)) 
-      {
-        status.style.color = "red";
-        status.innerHTML = "<font size='5'>Crowded</font>";
-      }     
-      crowded++;
-      console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
-    }
+function crowdedFunc()
+{
+  var status = document.getElementById("currStatus");
+  if ((crowded>=empty && crowded >=slightly) || (empty==0 && slightly==0 && crowded==0)) 
+  {
+    status.style.color = "red";
+    status.innerHTML = "<font size='5'>Crowded</font>";
+  }     
+  crowded++;
+  console.log("empty: " + empty + " slightly: " + slightly + " crowded: " + crowded);
+}
 
     /*function addReview() {
         var review = document.getElementById("fill");
@@ -66,8 +66,13 @@
     //  review.("<p>SPAM</p></div>");
     //}
 
-    function popup() {
-        var popup = document.getElementById('myPopup');
-        popup.classList.toggle('show');
-        console.log("Got the review!")
-    }
+function popup() {
+    var popup = document.getElementById('myPopup');
+    popup.classList.toggle('show');
+    console.log("Got the review!")
+}
+
+function sendInfo() {
+  console.log("-----------------CLICKED NAVIGATION----------------")
+  ga('send', 'event', 'nav', 'click');
+}

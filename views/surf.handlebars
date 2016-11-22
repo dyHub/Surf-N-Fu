@@ -25,60 +25,72 @@
     </style>
 </head>
 <body>
-<div id="map">
+    <div id="map">
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 32.853215, lng: -117.258381},
+                    zoom: 12
+                });
+
+                var infowindowArray = [];
+
+                {{#each arr}}
+                    var lati = {{latitude}};
+                    var longi = {{longitude}};
+                    var coord{{id}} = {lat: lati, lng: longi};
+
+                    var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="55px" width="55px"/></div>'
+                            + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
+                            + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
+                            + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
+                            + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
+                            + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
+                            + '<div id="content">'
+                            + '<h4>{{name}}</h4>'+ '</div>'
+                            + '<a href="/new/weather/{{id}}" type="button" class="btn btn-info btn-sm" onclick="sendInfo();">'
+                            + 'Weather Overview</a> &nbsp;&nbsp; '
+                            + '<a href="/new/review/{{id}}" type="button" class="btn btn-warning btn-sm" onclick="sendInfo();">More Details</a>';
+
+                    var infowindow{{id}} = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+
+                    var marker{{id}} = new google.maps.Marker({
+                        position: coord{{id}},
+                        map: map
+                    });
+
+                    marker{{id}}.addListener('click', function() {
+                        for(var i=0; i < infowindowArray.length; i++) {
+                            infowindowArray[i].close();
+                        }
+                        infowindow{{id}}.open(map, marker{{id}});
+                        infowindowArray.push(infowindow{{id}});
+                    });
+                {{/each}}
+            }
+
+        </script>
+    </div>
+
+    <script async defer
+            src={{googleAPI}}>
+    </script>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
     <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 32.853215, lng: -117.258381},
-                zoom: 12
-            });
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            var infowindowArray = [];
-
-            {{#each arr}}
-                var lati = {{latitude}};
-                var longi = {{longitude}};
-                var coord{{id}} = {lat: lati, lng: longi};
-
-                var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="55px" width="55px"/></div>'
-                        + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
-                        + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
-                        + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
-                        + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
-                        + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
-                        + '<div id="content">'
-                        + '<h4>{{name}}</h4>'+ '</div>'
-                        + '<a href="/new/weather/{{id}}" type="button" class="btn btn-info btn-sm">'
-                        + 'Weather Overview</a> &nbsp;&nbsp; '
-                        + '<a href="/new/review/{{id}}" type="button" class="btn btn-warning btn-sm">More Details</a>';
-
-                var infowindow{{id}} = new google.maps.InfoWindow({
-                    content: contentString
-                });
-
-                var marker{{id}} = new google.maps.Marker({
-                    position: coord{{id}},
-                    map: map
-                });
-
-                marker{{id}}.addListener('click', function() {
-                    for(var i=0; i < infowindowArray.length; i++) {
-                        infowindowArray[i].close();
-                    }
-                    infowindow{{id}}.open(map, marker{{id}});
-                    infowindowArray.push(infowindow{{id}});
-                });
-            {{/each}}
-        }
+      ga('create', 'UA-87618309-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
-</div>
-
-<script async defer
-        src={{googleAPI}}>
-</script>
-
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

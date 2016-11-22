@@ -15,9 +15,9 @@
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/logged">Home</a></li>
-                <li {{#if isMap}}class="active"{{/if}}><a href={{mapLink}}>Map</a></li>
-                <li {{#if isWeather}}class="active"{{/if}}><a href={{weatherLink}}>Weather</a></li>
-                <li {{#if isReview}}class="active"{{/if}}><a href={{reviewLink}}>Reviews</a></li>
+                <li {{#if isMap}}class="active"{{/if}}><a href={{mapLink}} onclick="sendInfo();">Map</a></li>
+                <li {{#if isWeather}}class="active"{{/if}}><a href={{weatherLink}} onclick="sendInfo();">Weather</a></li>
+                <li {{#if isReview}}class="active"{{/if}}><a href={{reviewLink}} onclick="sendInfo();">Reviews</a></li>
             </ul>
         </div>
     </div>

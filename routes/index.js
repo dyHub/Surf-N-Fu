@@ -3,5 +3,5 @@ exports.view = function(req, res){
 };
 
 exports.view2 = function(req, res){
-	res.render('index', {new_index: true});
+	res.render('index', {new_index: true, user: req.app.get('user') != null});
 };

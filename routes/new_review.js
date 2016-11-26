@@ -2,7 +2,7 @@ exports.view = function(req, res){
     var beachJson = require("../public/json/beachesArr.json");
     var request = require("request");
     var weatherKey = process.env.WUKEYBACKUP;
-    var user = process.env.user != null;
+    var user = req.app.get('user') != null;
 
     //console.log("activity is " + activity);
     var beachID = req.params.id;

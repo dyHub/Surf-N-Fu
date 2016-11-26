@@ -22,6 +22,7 @@ var new_review = require('./routes/new_review');
 var new_weather = require('./routes/new_weather');
 var new_add = require('./routes/new_add');
 var new_signup = require('./routes/new_signup');
+var logout = require('./routes/logout');
 
 var app = express();
 
@@ -112,6 +113,8 @@ app.get('/new/sign_up', function(req, res){
 });
 app.get('/new/signup', new_signup.view);
 app.get('/new/logged/:name', logged.view);
+app.get('/logout', logout.view);
+app.get('/login_confirm', login.confirm);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

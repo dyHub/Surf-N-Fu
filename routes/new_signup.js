@@ -27,9 +27,9 @@ exports.view = function(req, res){
             console.log(data);
             fs.writeFile("./public/json/login.json", JSON.stringify(data), function(err){
                 console.log(err);
-                process.env.user = req.query.username;
+                req.app.set('user', req.query.username);
                 res.writeHead(302, {
-                    'Location': '/new/logged/' + req.query.username
+                    'Location': '/new'
                 });
                 res.end();
             });

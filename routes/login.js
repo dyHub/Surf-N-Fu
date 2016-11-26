@@ -8,6 +8,26 @@ exports.view = function(req, res){
 
   console.log("activity is " + activity);
   res.render('login', {
-  	'activity': activity,
+  	'activity': activity
   });
+};
+
+var users = require("../public/json/login.json");
+exports.confirm = function(req, res){
+
+    var done = false;
+    for(var i=0; i<users.length; i++){
+        if (req.query.username == users[i].username
+            && req.query.pwd == users[i].password) {
+            console.log("success!");
+            req.app.set('user', req.query.username);
+            done = true;
+            res.redirect("/new");
+        }
+    }
+
+    if (!done){
+        console.log("password or username mot valid");
+        res.render('error');
+    }
 };

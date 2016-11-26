@@ -32,12 +32,15 @@
 <body>
 	<!-- Testing login -->
     {{#if new_index}}
-        <a href="/new/sign_up/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
-    {{else}}
-        <a href="/signup/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
+        {{#if user}}
+            <a href="/logout" type="button" class="btn btn-secondary btn-lg pull-right">Log Out</a>
+        {{else}}
+            <a href="/new/sign_up/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
+            <a href="/login/" type="button" class="btn btn-info btn-lg pull-right">Log in</a>
+        {{/if}}
     {{/if}}
+    <!--<a href="/signup/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>-->
 
-	<a href="/login/" type="button" class="btn btn-info btn-lg pull-right">Log in</a>
 
 	<br>
 

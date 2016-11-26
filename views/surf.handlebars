@@ -41,21 +41,9 @@
                     var longi = {{longitude}};
                     var coord{{id}} = {lat: lati, lng: longi};
 
-                    var contentString = '<div class="row"><img src={{@root.weatherData.icon_url}} height="55px" width="55px"/></div>'
-                            + '<div id="temperature-text">{{@root.weatherData.temp_f}}°F</div>'
-                            + '<div id="temperature-text">{{@root.weatherData.temp_c}}°C</div>'
-                            + '<div id="wind-text">Wind Speed: {{@root.weatherData.wind_mph}}mph</div>'
-                            + '<div id="wind-text">Relative Humidity: {{@root.weatherData.relative_humidity}}</div>'
-                            + '<div id="wind-text">Visibility: {{@root.weatherData.visibility_mi}} mi</div><br>'
-                            + '<div id="content">'
-                            + '<h4>{{name}}</h4>'+ '</div>'
-                            + '<a href="/new/weather/{{id}}" type="button" class="btn btn-info btn-sm" onclick="sendInfo();">'
-                            + 'Weather Overview</a> &nbsp;&nbsp; '
-                            + '<a href="/new/review/{{id}}" type="button" class="btn btn-warning btn-sm" onclick="sendInfo();">More Details</a>';
 
-                    var infowindow{{id}} = new google.maps.InfoWindow({
-                        content: contentString
-                    });
+
+                    var infowindow{{id}} = null;
 
                     var marker{{id}} = new google.maps.Marker({
                         position: coord{{id}},
@@ -66,8 +54,37 @@
                         for(var i=0; i < infowindowArray.length; i++) {
                             infowindowArray[i].close();
                         }
-                        infowindow{{id}}.open(map, marker{{id}});
-                        infowindowArray.push(infowindow{{id}});
+                        var contentString = "";
+                        if(infowindow{{id}} == null || infowindow{{id}}.getContent() == null){
+                            $.get("/popup/{{id}}", successCallback);
+                            function successCallback(result){
+                                console.log("success again");
+                                console.log(result);
+                                contentString = '<div class="row" style="padding:10px"><img src=' + result['icon_url'] +' height="55px" width="55px"/></div>'
+                                        + '<div id="temperature-text">' + result['temp_f'] + '°F</div>'
+                                        + '<div id="temperature-text">' + result['temp_c'] + '°C</div>'
+                                        + '<div id="wind-text">Wind Speed: ' + result['wind_mph'] + ' mph</div>'
+                                        + '<div id="wind-text">Relative Humidity: ' + result['relative_humidity'] + '</div>'
+                                        + '<div id="wind-text">Visibility: ' + result['visibility_mi'] + ' mi</div><br>'
+                                        + '<div id="content">'
+                                        + '<h4>{{name}}</h4>'+ '</div>'
+                                        + '<a href="/new/weather/{{id}}" type="button" class="btn btn-success btn-sm" onclick="sendInfo();">'
+                                        + 'Weather Overview</a> &nbsp;&nbsp; '
+                                        + '<a href="/new/review/{{id}}" type="button" class="btn btn-warning btn-sm" onclick="sendInfo();">More Details</a>';
+
+                                infowindow{{id}} = new google.maps.InfoWindow({
+                                    content: contentString
+                                });
+
+
+                                infowindow{{id}}.open(map, marker{{id}});
+                                infowindowArray.push(infowindow{{id}});
+                            }
+                        } else {
+
+                            infowindow{{id}}.open(map, marker{{id}});
+                            infowindowArray.push(infowindow{{id}});
+                        }
                     });
                 {{/each}}
             }

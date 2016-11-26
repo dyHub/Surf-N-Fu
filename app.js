@@ -115,6 +115,7 @@ app.get('/new/signup', new_signup.view);
 app.get('/new/logged/:name', logged.view);
 app.get('/logout', logout.view);
 app.get('/login_confirm', login.confirm);
+app.get('/popup/:id', surf.single_weather);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -21,6 +21,7 @@ exports.view = function(req, res){
                 'description': thisBeach["description"].join(''),
                 'image': image,
                 'weatherData': weatherData,
+                'beachID': beachID,
                 'isReview': true
             });
         } else {

@@ -34,6 +34,7 @@ exports.view = function(req, res){
                     'beachName': thisBeach["name"],
                     'description': thisBeach["description"].join(''),
                     'image': image,
+                    'beach' : beach,
                     'weatherData': weatherData,
                     'isReview': true
                 });

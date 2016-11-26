@@ -21,6 +21,7 @@ var surf = require('./routes/surf');
 var new_review = require('./routes/new_review');
 var new_weather = require('./routes/new_weather');
 var new_add = require('./routes/new_add');
+var new_signup = require('./routes/new_signup');
 
 var app = express();
 
@@ -106,6 +107,11 @@ app.get('/new/surf', surf.view);
 app.get('/new/review/:id', new_review.view);
 app.get('/new/weather/:id', new_weather.view);
 app.get('/new/add/:id', new_add.view);
+app.get('/new/sign_up', function(req, res){
+    res.render('new_signup');
+});
+app.get('/new/signup', new_signup.view);
+app.get('/new/logged/:name', logged.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

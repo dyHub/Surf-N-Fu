@@ -31,7 +31,11 @@
 
 <body>
 	<!-- Testing login -->
-	<a href="/signup/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
+    {{#if new_index}}
+        <a href="/new/sign_up/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
+    {{else}}
+        <a href="/signup/" type="button" class="btn btn-secondary btn-lg pull-right">Sign Up</a>
+    {{/if}}
 
 	<a href="/login/" type="button" class="btn btn-info btn-lg pull-right">Log in</a>
 

@@ -75,16 +75,21 @@
 
         <div class="row" style="padding-top:50px; padding-bottom:150px">
 
-            <form id="addComment" role="form" method="get" action="/new/add/{{beachID}}">
-                <!--textarea rows = "4" cols = "100" placeholder="Write your review here..."></textarea-->
-                <input type="text" class="form-control" id="description" placeholder="Write your review here..." name="description">
-                <br>
-                <input class="btn btn-default" type="submit" value="Submit Review" onclick="popup();"></input>
-            </form>
+            {{#if user}}
+                <form id="addComment" role="form" method="get" action="/new/add/{{beachID}}">
+                    <!--textarea rows = "4" cols = "100" placeholder="Write your review here..."></textarea-->
+                    <input type="text" class="form-control" id="description" placeholder="Write your review here..." name="description">
+                    <br>
+                    <input class="btn btn-default" type="submit" value="Submit Review" onclick="popup();"></input>
+                </form>
 
-            <div class="popup">
-                <span class="popuptext" id="myPopup" >Your review has been received! The page will refresh.</span>
-            </div>
+                <div class="popup">
+                    <span class="popuptext" id="myPopup" >Your review has been received! The page will refresh.</span>
+                </div>
+            {{/if}}
+
+
+
 
             <!-- <div class="row" style="padding-bottom: 50px">
                 <a href="/new/surf" class="btn btn-info btn-bg pull-right">BACK</a>

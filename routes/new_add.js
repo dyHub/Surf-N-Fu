@@ -15,7 +15,7 @@ exports.view = function(req, res){
         data = JSON.parse(data);
 
 
-        data.push({"name": "manuja", "description": req.query.description});
+        data.push({"name": process.env.user, "description": req.query.description});
         console.log(data);
         fs.writeFile("./public/json/reviewBeaches.json", JSON.stringify(data), function(err){
             console.log(err);

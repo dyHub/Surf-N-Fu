@@ -1,5 +1,6 @@
 exports.view = function(req, res){
     var beachJson = require("../public/json/beachesArr.json");
+    var reviewJson = require("../public/json/reviewBeaches.json");
     var request = require("request");
     var weatherKey = process.env.WUKEYBACKUP;
     var user = req.app.get('user') != null;
@@ -24,6 +25,7 @@ exports.view = function(req, res){
                 'weatherData': weatherData,
                 'beachID': beachID,
                 'user': user,
+                'reviewJson': reviewJson,
                 'isReview': true
             });
         } else {

@@ -108,9 +108,7 @@
                 <span>&#9734</span>
             </span>
                 <p>This place is awesome!! </p>
-                <a href="#" class="btn-link">Useful</a>
-                &nbsp;
-                <a href="#" class="btn-link">Funny</a>
+
             </div>
             <div class="row" style="padding-left:25px; padding-top:25px">
                 <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12508907_10203998880412846_5097805872594803245_n.jpg?oh=05cd5bc9a3bf2d72a592d2daccd1c341&oe=58D21EFD"
@@ -124,12 +122,18 @@
                 <span>&#9733</span>
             </span>
                 <p>I love this place! </p><p>I wish I can stay here everyday!</p>
-                <a href="#" class="btn-link">Useful</a>
-                &nbsp;
-                <a href="#" class="btn-link">Funny</a>
-
-                <br>
             </div>
+
+            {{#each reviewJson}}
+                <div class="row" style="padding-left:25px; padding-top:25px">
+                    <img src="/images/placeholder.png"
+                         height="25px" width="25px" align="left"/>
+                    <h4>&nbsp;&nbsp;{{this.name}}</h4>
+                    <p>{{this.description}}</p>
+
+                </div>
+
+            {{/each}}
 
             <br><br>
             

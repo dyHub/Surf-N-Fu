@@ -9,12 +9,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-uppercase" href="/logged">{{activity}}</a>
+            <a class="navbar-brand text-uppercase" href="/">{{activity}}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/logged">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li {{#if isMap}}class="active"{{/if}}><a href={{mapLink}} onclick="sendInfo();">Map</a></li>
                 <li {{#if isWeather}}class="active"{{/if}}><a href={{weatherLink}} onclick="sendInfo();">Weather</a></li>
                 <li {{#if isReview}}class="active"{{/if}}><a href={{reviewLink}} onclick="sendInfo();">Reviews</a></li>
